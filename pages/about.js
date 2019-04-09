@@ -17,10 +17,10 @@ const IMAGES = [
     height: 2
   },
   {
-    src: "https://noxxembirphotostorage.sfo2.digitaloceanspaces.com/Product/181001_EMS0029.jpg",
-    thumbnail: "https://noxxembirphotostorage.sfo2.digitaloceanspaces.com/Product/181001_EMS0029.jpg",
-    width: 1,
-    height: 2
+    src: "lemonbrella_web_big_793_1181.jpg",
+    thumbnail: "lemonbrella_web_big_793_1181.jpg",
+    width: 793,
+    height: 1181
   },
   {
     src: "https://noxxembirphotostorage.sfo2.digitaloceanspaces.com/Product/181105_EMS0056%20copy.jpg",
