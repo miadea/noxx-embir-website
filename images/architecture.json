@@ -1,0 +1,13 @@
+[
+  {
+    "lightbox": {
+      "src": "https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Product/ciroc_web_large.jpg",
+      "caption": "© Noxx Embir"
+    },
+    "thumbnail": {
+      "thumbnail": "https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Product/ciroc_web_small_681_900.jpg",
+      "thumbnailWidth": 681,
+      "thumbnailHeight": 900
+    }
+  }
+]

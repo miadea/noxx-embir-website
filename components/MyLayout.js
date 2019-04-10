@@ -1,16 +1,26 @@
 import Header from './Header'
 
 const layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
+  margin: 20
 }
 
 const Layout = props => (
   <div style={layoutStyle}>
     <Header />
-    <p>Work in progress</p>
     {props.children}
+    <style jsx global>{`
+      body {
+        padding: 0 16px;
+        background: black;
+        color: white;
+      }
+      .ReactGridGallery_tile-viewport:hover {
+        background: black;
+      }
+      .ReactGridGallery_tile-viewport:hover img {
+        opacity: 0.7;
+      }
+    `}</style>
   </div>
 )
 
