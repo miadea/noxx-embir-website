@@ -4,13 +4,10 @@ import Gallery from "react-grid-gallery";
 import Lightbox from 'react-images';
 
 export default class GalleryPage extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      currentImage: 0,
-      lightboxIsOpen: false,
-      width: window.innerWidth
-    }
+  state = {
+    currentImage: 0,
+    lightboxIsOpen: false,
+    width: window.innerWidth
   }
   componentWillMount() {
     window.addEventListener('resize', this.handleWindowSizeChange);
@@ -20,36 +17,31 @@ export default class GalleryPage extends React.Component {
   }
   render() {
     const isMobile = this.state.width <= 500;
-    if (isMobile) {
-      return (
-        <div>
-          {this.props.images.map((image, i) => {
-            return <img src={image.thumbnail.thumbnail} key={image.thumbnail.thumbnail}
-            style={{
-              width: "100%",
-              border: 0,
-              verticalAlign: "middle",
-              marginBottom: 5
-            }}
-            />
-          })}
-        </div>
-      )
-    }
+    if (isMobile) return (
+      <div>
+        {this.props.images.map((image, i) => {
+          return <img src={image.thumbnail.thumbnail} key={image.thumbnail.thumbnail}
+          style={{
+            width: "100%", verticalAlign: "middle",
+            border: 0, marginBottom: 5
+          }}
+          />
+        })}
+      </div>
+    )
     return (
       <div>
         <div style={{
-          display: "block",
-          minHeight: 1,
-          width: "100%",
-          overflow: "auto"
+          display: "block", minHeight: 1,
+          width: "100%", overflow: "auto"
         }}>
           <Gallery onClick={this.openLightbox}
             enableImageSelection={false}
             enableLightbox={false}
             rowHeight={450}
             onClickThumbnail={this.openLightbox}
-            images={this.props.images.map(({thumbnail}) => ({...thumbnail, src: ''}))} />
+            images={this.props.images.map(({thumbnail}) => ({...thumbnail, src: ''}))}
+          />
         </div>
         <Lightbox images={this.props.images.map(({lightbox}) => lightbox )}
           backdropClosesModal
@@ -69,19 +61,12 @@ export default class GalleryPage extends React.Component {
     this.setState({ currentImage, lightboxIsOpen: true });
   }
   closeLightbox = () => {
-    this.setState({
-      currentImage: 0,
-      lightboxIsOpen: false,
-    });
+    this.setState({ currentImage: 0, lightboxIsOpen: false });
   }
   gotoPrevious = () => {
-    this.setState({
-      currentImage: this.state.currentImage - 1,
-    });
+    this.setState({ currentImage: this.state.currentImage - 1 });
   }
   gotoNext = () => {
-    this.setState({
-      currentImage: this.state.currentImage + 1,
-    });
+    this.setState({ currentImage: this.state.currentImage + 1 });
   }
 }

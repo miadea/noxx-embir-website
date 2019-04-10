@@ -45,11 +45,23 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(GalleryPage, _React$Component);
 
   function GalleryPage() {
+    var _getPrototypeOf2;
+
     var _this;
 
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, GalleryPage);
 
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(GalleryPage).call(this));
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, (_getPrototypeOf2 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(GalleryPage)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "state", {
+      currentImage: 0,
+      lightboxIsOpen: false,
+      width: window.innerWidth
+    });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "handleWindowSizeChange", function () {
       _this.setState({
@@ -83,11 +95,6 @@ function (_React$Component) {
       });
     });
 
-    _this.state = {
-      currentImage: 0,
-      lightboxIsOpen: false,
-      width: window.innerWidth
-    };
     return _this;
   }
 
@@ -105,37 +112,33 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       var isMobile = this.state.width <= 500;
-
-      if (isMobile) {
-        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+      if (isMobile) return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      }, this.props.images.map(function (image, i) {
+        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
+          src: image.thumbnail.thumbnail,
+          key: image.thumbnail.thumbnail,
+          style: {
+            width: "100%",
+            verticalAlign: "middle",
+            border: 0,
+            marginBottom: 5
+          },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 25
+            lineNumber: 23
           },
           __self: this
-        }, this.props.images.map(function (image, i) {
-          return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
-            src: image.thumbnail.thumbnail,
-            key: image.thumbnail.thumbnail,
-            style: {
-              width: "100%",
-              border: 0,
-              verticalAlign: "middle",
-              marginBottom: 5
-            },
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 27
-            },
-            __self: this
-          });
-        }));
-      }
-
+        });
+      }));
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 33
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
@@ -147,7 +150,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 34
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_grid_gallery__WEBPACK_IMPORTED_MODULE_10___default.a, {
@@ -164,7 +167,7 @@ function (_React$Component) {
         }),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 38
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_images__WEBPACK_IMPORTED_MODULE_11___default.a, {
@@ -180,7 +183,7 @@ function (_React$Component) {
         isOpen: this.state.lightboxIsOpen,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 46
         },
         __self: this
       }));
