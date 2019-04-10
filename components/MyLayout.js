@@ -19,7 +19,7 @@ const Layout = props => (
         align-items: center;
         width: 100vw;
         height: 100vh;
-        padding-top: 22px;
+        padding-top: 52px;
       }
       @keyframes appear {
         0% {

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -130,14 +130,17 @@ var LINKS = [{
   name: "Home",
   url: '/'
 }, {
-  name: "Products",
-  url: '/products'
+  name: "Product",
+  url: '/product'
+}, {
+  name: "Retouching",
+  url: '/retouching'
 }, {
   name: "Architecture",
   url: '/architecture'
 }, {
-  name: "About",
-  url: '/about'
+  name: "Contact",
+  url: '/contact'
 }];
 
 var Header =
@@ -174,21 +177,21 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 22
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_mobile_header__WEBPACK_IMPORTED_MODULE_9__["default"], {
         links: LINKS,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 23
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "header-desktop",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 24
         },
         __self: this
       }, LINKS.map(function (_ref) {
@@ -199,14 +202,14 @@ function (_React$Component) {
           key: url,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 25
+            lineNumber: 26
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
           style: styles.linkStyle,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 26
+            lineNumber: 27
           },
           __self: this
         }, name));
@@ -243,7 +246,7 @@ var _jsxFileName = "/Users/kestanous/dev/play/noxx-embir-website/components/MyLa
 var Layout = function Layout(props) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     style: styles.main,
-    className: "jsx-3740160099" + " " + 'layout',
+    className: "jsx-2513598150" + " " + 'layout',
     __source: {
       fileName: _jsxFileName,
       lineNumber: 3
@@ -256,16 +259,16 @@ var Layout = function Layout(props) {
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "jsx-3740160099" + " " + "main",
+    className: "jsx-2513598150" + " " + "main",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: this
   }, props.children), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "3740160099",
+    id: "2513598150",
     __self: this
-  }, "body{background:black;color:white;margin:0px;padding:0px;}.main{-webkit-flex:1;-ms-flex:1;flex:1;display:block;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100vw;height:100vh;padding-top:22px;}@-webkit-keyframes appear{0%{opacity:0;}100%{opacity:1;}}@keyframes appear{0%{opacity:0;}100%{opacity:1;}}@-webkit-keyframes slideIn{0%{-webkit-transform:translateX(-2%);-ms-transform:translateX(-2%);transform:translateX(-2%);}100%{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);}}@keyframes slideIn{0%{-webkit-transform:translateX(-2%);-ms-transform:translateX(-2%);transform:translateX(-2%);}100%{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);}}@-webkit-keyframes shrink{0%{width:95%;}100%{width:90%;}}@keyframes shrink{0%{width:95%;}100%{width:90%;}}.header-desktop{display:none;}@media only screen and (min-width:501px){.ReactGridGallery_tile-viewport:hover{background:black;}.ReactGridGallery_tile-viewport:hover img{opacity:0.7;}.layout{padding:0 16px;}.main{padding-top:0px;}.header-desktop{margin:0 -16px;display:block;}.header-mobile{display:none !important;}}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZXN0YW5vdXMvZGV2L3BsYXkvbm94eC1lbWJpci13ZWJzaXRlL2NvbXBvbmVudHMvTXlMYXlvdXQuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBT3VCLEFBRzBCLEFBTVYsQUFVSyxBQUdBLEFBS2dCLEFBR0YsQUFLZCxBQUdBLEFBS0MsQUFJTSxBQUdMLEFBR0csQUFHQyxBQUdELEFBSVMsVUEzQzFCLEFBR0EsQUFhQSxBQUdBLEVBWUEsQ0FQRixFQVVFLEFBTWdCLENBSGhCLENBckRZLEFBNENaLE9BZ0JBLEtBM0RXLEFBd0RYLElBbkRjLE9BSkgsT0FLVyxLQUp4QixnQ0F3QkUsTUFIQSxtQ0FoQm1CLDZGQUNQLFlBQ0MsYUFDSSxpQkFDbkIiLCJmaWxlIjoiL1VzZXJzL2tlc3Rhbm91cy9kZXYvcGxheS9ub3h4LWVtYmlyLXdlYnNpdGUvY29tcG9uZW50cy9NeUxheW91dC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBIZWFkZXIgZnJvbSAnLi9IZWFkZXInXG5jb25zdCBMYXlvdXQgPSBwcm9wcyA9PiAoXG4gIDxkaXYgY2xhc3NOYW1lPSdsYXlvdXQnIHN0eWxlPXtzdHlsZXMubWFpbn0+XG4gICAgPEhlYWRlciAvPlxuICAgIDxkaXYgY2xhc3NOYW1lPVwibWFpblwiPlxuICAgICAge3Byb3BzLmNoaWxkcmVufVxuICAgIDwvZGl2PlxuICAgIDxzdHlsZSBqc3ggZ2xvYmFsPntgXG4gICAgICBib2R5IHtcbiAgICAgICAgYmFja2dyb3VuZDogYmxhY2s7XG4gICAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICAgICAgbWFyZ2luOiAwcHg7XG4gICAgICAgIHBhZGRpbmcgMHB4O1xuICAgICAgfVxuICAgICAgLm1haW4ge1xuICAgICAgICBmbGV4OiAxO1xuICAgICAgICBkaXNwbGF5OiBibG9jaztcbiAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDEwMHZ3O1xuICAgICAgICBoZWlnaHQ6IDEwMHZoO1xuICAgICAgICBwYWRkaW5nLXRvcDogMjJweDtcbiAgICAgIH1cbiAgICAgIEBrZXlmcmFtZXMgYXBwZWFyIHtcbiAgICAgICAgMCUge1xuICAgICAgICAgIG9wYWNpdHk6IDA7XG4gICAgICAgIH1cbiAgICAgICAgMTAwJSB7XG4gICAgICAgICAgb3BhY2l0eTogMTtcbiAgICAgICAgfVxuICAgICAgfVxuICAgICAgQGtleWZyYW1lcyBzbGlkZUluIHtcbiAgICAgICAgMCUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgtMiUpO1xuICAgICAgICB9XG4gICAgICAgIDEwMCUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgwKTtcbiAgICAgICAgfVxuICAgICAgfVxuICAgICAgQGtleWZyYW1lcyBzaHJpbmsge1xuICAgICAgICAwJSB7XG4gICAgICAgICAgd2lkdGg6IDk1JTtcbiAgICAgICAgfVxuICAgICAgICAxMDAlIHtcbiAgICAgICAgICB3aWR0aDogOTAlO1xuICAgICAgICB9XG4gICAgICB9XG5cbiAgICAgIC5oZWFkZXItZGVza3RvcCB7XG4gICAgICAgIGRpc3BsYXk6IG5vbmU7XG4gICAgICB9XG4gICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDUwMXB4KSB7XG4gICAgICAgIC5SZWFjdEdyaWRHYWxsZXJ5X3RpbGUtdmlld3BvcnQ6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IGJsYWNrO1xuICAgICAgICB9XG4gICAgICAgIC5SZWFjdEdyaWRHYWxsZXJ5X3RpbGUtdmlld3BvcnQ6aG92ZXIgaW1nIHtcbiAgICAgICAgICBvcGFjaXR5OiAwLjc7XG4gICAgICAgIH1cbiAgICAgICAgLmxheW91dCB7XG4gICAgICAgICAgcGFkZGluZzogMCAxNnB4O1xuICAgICAgICB9XG4gICAgICAgIC5tYWluIHtcbiAgICAgICAgICBwYWRkaW5nLXRvcDogMHB4O1xuICAgICAgICB9XG4gICAgICAgIC5oZWFkZXItZGVza3RvcCB7XG4gICAgICAgICAgbWFyZ2luOiAwIC0xNnB4O1xuICAgICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgICB9XG4gICAgICAgIC5oZWFkZXItbW9iaWxlIHtcbiAgICAgICAgICBkaXNwbGF5OiBub25lICFpbXBvcnRhbnQ7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICBgfTwvc3R5bGU+XG4gIDwvZGl2PlxuKVxuXG5leHBvcnQgZGVmYXVsdCBMYXlvdXRcblxuY29uc3Qgc3R5bGVzID0ge1xuICBtYWluOiB7XG4gICAgZGlzcGxheTonZmxleCcsXG4gICAgZmxleERpcmVjdGlvbjonY29sdW1uJyxcbiAgICBhbGlnbkl0ZW1zOiAnY2VudGVyJyxcbiAgICBoZWlnaHQ6ICcxMDB2aCcsXG4gIH1cbn1cbiJdfQ== */\n/*@ sourceURL=/Users/kestanous/dev/play/noxx-embir-website/components/MyLayout.js */"));
+  }, "body{background:black;color:white;margin:0px;padding:0px;}.main{-webkit-flex:1;-ms-flex:1;flex:1;display:block;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100vw;height:100vh;padding-top:52px;}@-webkit-keyframes appear{0%{opacity:0;}100%{opacity:1;}}@keyframes appear{0%{opacity:0;}100%{opacity:1;}}@-webkit-keyframes slideIn{0%{-webkit-transform:translateX(-2%);-ms-transform:translateX(-2%);transform:translateX(-2%);}100%{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);}}@keyframes slideIn{0%{-webkit-transform:translateX(-2%);-ms-transform:translateX(-2%);transform:translateX(-2%);}100%{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);}}@-webkit-keyframes shrink{0%{width:95%;}100%{width:90%;}}@keyframes shrink{0%{width:95%;}100%{width:90%;}}.header-desktop{display:none;}@media only screen and (min-width:501px){.ReactGridGallery_tile-viewport:hover{background:black;}.ReactGridGallery_tile-viewport:hover img{opacity:0.7;}.layout{padding:0 16px;}.main{padding-top:0px;}.header-desktop{margin:0 -16px;display:block;}.header-mobile{display:none !important;}}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZXN0YW5vdXMvZGV2L3BsYXkvbm94eC1lbWJpci13ZWJzaXRlL2NvbXBvbmVudHMvTXlMYXlvdXQuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBT3VCLEFBRzBCLEFBTVYsQUFVSyxBQUdBLEFBS2dCLEFBR0YsQUFLZCxBQUdBLEFBS0MsQUFJTSxBQUdMLEFBR0csQUFHQyxBQUdELEFBSVMsVUEzQzFCLEFBR0EsQUFhQSxBQUdBLEVBWUEsQ0FQRixFQVVFLEFBTWdCLENBSGhCLENBckRZLEFBNENaLE9BZ0JBLEtBM0RXLEFBd0RYLElBbkRjLE9BSkgsT0FLVyxLQUp4QixnQ0F3QkUsTUFIQSxtQ0FoQm1CLDZGQUNQLFlBQ0MsYUFDSSxpQkFDbkIiLCJmaWxlIjoiL1VzZXJzL2tlc3Rhbm91cy9kZXYvcGxheS9ub3h4LWVtYmlyLXdlYnNpdGUvY29tcG9uZW50cy9NeUxheW91dC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBIZWFkZXIgZnJvbSAnLi9IZWFkZXInXG5jb25zdCBMYXlvdXQgPSBwcm9wcyA9PiAoXG4gIDxkaXYgY2xhc3NOYW1lPSdsYXlvdXQnIHN0eWxlPXtzdHlsZXMubWFpbn0+XG4gICAgPEhlYWRlciAvPlxuICAgIDxkaXYgY2xhc3NOYW1lPVwibWFpblwiPlxuICAgICAge3Byb3BzLmNoaWxkcmVufVxuICAgIDwvZGl2PlxuICAgIDxzdHlsZSBqc3ggZ2xvYmFsPntgXG4gICAgICBib2R5IHtcbiAgICAgICAgYmFja2dyb3VuZDogYmxhY2s7XG4gICAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICAgICAgbWFyZ2luOiAwcHg7XG4gICAgICAgIHBhZGRpbmcgMHB4O1xuICAgICAgfVxuICAgICAgLm1haW4ge1xuICAgICAgICBmbGV4OiAxO1xuICAgICAgICBkaXNwbGF5OiBibG9jaztcbiAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDEwMHZ3O1xuICAgICAgICBoZWlnaHQ6IDEwMHZoO1xuICAgICAgICBwYWRkaW5nLXRvcDogNTJweDtcbiAgICAgIH1cbiAgICAgIEBrZXlmcmFtZXMgYXBwZWFyIHtcbiAgICAgICAgMCUge1xuICAgICAgICAgIG9wYWNpdHk6IDA7XG4gICAgICAgIH1cbiAgICAgICAgMTAwJSB7XG4gICAgICAgICAgb3BhY2l0eTogMTtcbiAgICAgICAgfVxuICAgICAgfVxuICAgICAgQGtleWZyYW1lcyBzbGlkZUluIHtcbiAgICAgICAgMCUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgtMiUpO1xuICAgICAgICB9XG4gICAgICAgIDEwMCUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgwKTtcbiAgICAgICAgfVxuICAgICAgfVxuICAgICAgQGtleWZyYW1lcyBzaHJpbmsge1xuICAgICAgICAwJSB7XG4gICAgICAgICAgd2lkdGg6IDk1JTtcbiAgICAgICAgfVxuICAgICAgICAxMDAlIHtcbiAgICAgICAgICB3aWR0aDogOTAlO1xuICAgICAgICB9XG4gICAgICB9XG5cbiAgICAgIC5oZWFkZXItZGVza3RvcCB7XG4gICAgICAgIGRpc3BsYXk6IG5vbmU7XG4gICAgICB9XG4gICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDUwMXB4KSB7XG4gICAgICAgIC5SZWFjdEdyaWRHYWxsZXJ5X3RpbGUtdmlld3BvcnQ6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IGJsYWNrO1xuICAgICAgICB9XG4gICAgICAgIC5SZWFjdEdyaWRHYWxsZXJ5X3RpbGUtdmlld3BvcnQ6aG92ZXIgaW1nIHtcbiAgICAgICAgICBvcGFjaXR5OiAwLjc7XG4gICAgICAgIH1cbiAgICAgICAgLmxheW91dCB7XG4gICAgICAgICAgcGFkZGluZzogMCAxNnB4O1xuICAgICAgICB9XG4gICAgICAgIC5tYWluIHtcbiAgICAgICAgICBwYWRkaW5nLXRvcDogMHB4O1xuICAgICAgICB9XG4gICAgICAgIC5oZWFkZXItZGVza3RvcCB7XG4gICAgICAgICAgbWFyZ2luOiAwIC0xNnB4O1xuICAgICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgICB9XG4gICAgICAgIC5oZWFkZXItbW9iaWxlIHtcbiAgICAgICAgICBkaXNwbGF5OiBub25lICFpbXBvcnRhbnQ7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICBgfTwvc3R5bGU+XG4gIDwvZGl2PlxuKVxuXG5leHBvcnQgZGVmYXVsdCBMYXlvdXRcblxuY29uc3Qgc3R5bGVzID0ge1xuICBtYWluOiB7XG4gICAgZGlzcGxheTonZmxleCcsXG4gICAgZmxleERpcmVjdGlvbjonY29sdW1uJyxcbiAgICBhbGlnbkl0ZW1zOiAnY2VudGVyJyxcbiAgICBoZWlnaHQ6ICcxMDB2aCcsXG4gIH1cbn1cbiJdfQ== */\n/*@ sourceURL=/Users/kestanous/dev/play/noxx-embir-website/components/MyLayout.js */"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
@@ -346,10 +349,15 @@ function (_React$Component) {
         alignItems: 'center',
         background: 'black',
         width: '100%',
-        color: 'white'
+        color: 'white',
+        cursor: 'pointer'
       },
       logo: {
-        margin: '0 auto'
+        width: "100%",
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginLeft: -26
       },
       linkStyle: {
         marginRight: 15
@@ -389,7 +397,7 @@ function (_React$Component) {
           name: name,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 28
+            lineNumber: 33
           },
           __self: this
         });
@@ -398,37 +406,44 @@ function (_React$Component) {
         className: "header-mobile",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 38
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: styles.container,
+        onClick: this.handleMenuClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 39
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(MenuButton, {
         open: open,
-        onClick: this.handleMenuClick,
         color: "white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 40
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: styles.logo,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 41
         },
         __self: this
-      }, "Logo")), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Menu, {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+        style: styles.logoSub,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
+        },
+        __self: this
+      }, "Noxx Embir Photography"))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Menu, {
         open: open,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 43
         },
         __self: this
       }, menuItems));
@@ -502,14 +517,14 @@ function (_React$Component2) {
         style: styles.container,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 103
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
         href: this.props.url,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 104
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
@@ -519,21 +534,21 @@ function (_React$Component2) {
         onClick: this.props.onClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 105
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
         style: styles.linkStyle,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 107
         },
         __self: this
       }, this.props.name))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: styles.line,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 110
         },
         __self: this
       }));
@@ -595,14 +610,14 @@ function (_React$Component3) {
         style: styles.container,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 146
+          lineNumber: 151
         },
         __self: this
       }, this.state.open ? react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: styles.menuList,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 149
+          lineNumber: 154
         },
         __self: this
       }, this.props.children) : null);
@@ -662,13 +677,13 @@ function (_React$Component4) {
           justifyContent: 'center',
           alignItems: 'center',
           cursor: 'pointer',
-          padding: '4px'
+          padding: '10px'
         },
         line: {
           height: '2px',
           width: '20px',
           background: this.state.color,
-          transition: 'all 0.2s ease'
+          transition: 'all .8s ease'
         },
         lineTop: {
           transform: this.state.open ? 'rotate(45deg)' : 'none',
@@ -692,28 +707,28 @@ function (_React$Component4) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 214
+          lineNumber: 219
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, styles.line, styles.lineTop),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 217
+          lineNumber: 222
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, styles.line, styles.lineMiddle),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 218
+          lineNumber: 223
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, styles.line, styles.lineBottom),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 219
+          lineNumber: 224
         },
         __self: this
       }));
@@ -2376,7 +2391,7 @@ function Index() {
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

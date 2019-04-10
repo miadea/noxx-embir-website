@@ -1,5 +1,7 @@
 import React from 'react'
 import Layout from '../components/MyLayout.js'
+import Img from 'react-image'
+import { BallBeat } from 'react-pure-loaders';
 import Gallery from "react-grid-gallery";
 import Lightbox from 'react-images';
 
@@ -20,12 +22,25 @@ export default class GalleryPage extends React.Component {
     if (isMobile) return (
       <div>
         {this.props.images.map((image, i) => {
-          return <img src={image.thumbnail.thumbnail} key={image.thumbnail.thumbnail}
-          style={{
-            width: "100%", verticalAlign: "middle",
-            border: 0, marginBottom: 5
-          }}
-          />
+          let {thumbnailHeight, thumbnailWidth} = image.thumbnail
+          , aspect = thumbnailWidth / thumbnailHeight
+          , height = this.state.width / aspect
+          return<Img src={image.thumbnail.thumbnail} key={image.thumbnail.thumbnail}
+            style={{ width: "100%", height,  marginBottom: 5 }}
+            loader={
+              <div style={{
+                background: 'gray',
+                width: "100%",
+                height,
+                marginBottom: 5,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
+              }}>
+                <BallBeat loading color="#FFFFFF" />
+              </div>
+            }
+            />
         })}
       </div>
     )

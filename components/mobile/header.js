@@ -13,10 +13,15 @@ export default class MobileHeader extends React.Component {
       alignItems:'center',
       background: 'black',
       width: '100%',
-      color: 'white'
+      color: 'white',
+      cursor: 'pointer'
     },
     logo: {
-      margin: '0 auto',
+      width: "100%",
+      display: 'flex',
+      alignItems:'center',
+      justifyContent: 'center',
+      marginLeft: -26
     },
     linkStyle: {
       marginRight: 15
@@ -31,9 +36,9 @@ export default class MobileHeader extends React.Component {
 
     return(
       <div className='header-mobile'>
-        <div style={styles.container}>
-          <MenuButton open={open} onClick={this.handleMenuClick} color='white'/>
-          <div style={styles.logo}>Logo</div>
+        <div style={styles.container}  onClick={this.handleMenuClick}>
+          <MenuButton open={open} color='white'/>
+          <div style={styles.logo}><div style={styles.logoSub}>Noxx Embir Photography</div></div>
         </div>
         <Menu open={open}>
           {menuItems}
@@ -187,13 +192,13 @@ class MenuButton extends React.Component {
         justifyContent: 'center',
         alignItems: 'center',
         cursor: 'pointer',
-        padding: '4px',
+        padding: '10px',
       },
       line: {
         height: '2px',
         width: '20px',
         background: this.state.color,
-        transition: 'all 0.2s ease',
+        transition: 'all .8s ease',
       },
       lineTop: {
         transform: this.state.open ? 'rotate(45deg)':'none',

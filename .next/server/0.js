@@ -22,10 +22,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _components_MyLayout_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/MyLayout.js */ "./components/MyLayout.js");
-/* harmony import */ var react_grid_gallery__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-grid-gallery */ "react-grid-gallery");
-/* harmony import */ var react_grid_gallery__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_grid_gallery__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var react_images__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-images */ "react-images");
-/* harmony import */ var react_images__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_images__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var react_image__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-image */ "react-image");
+/* harmony import */ var react_image__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_image__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var react_pure_loaders__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-pure-loaders */ "react-pure-loaders");
+/* harmony import */ var react_pure_loaders__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_pure_loaders__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var react_grid_gallery__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-grid-gallery */ "react-grid-gallery");
+/* harmony import */ var react_grid_gallery__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(react_grid_gallery__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var react_images__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-images */ "react-images");
+/* harmony import */ var react_images__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(react_images__WEBPACK_IMPORTED_MODULE_13__);
 
 
 
@@ -35,6 +39,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/Users/kestanous/dev/play/noxx-embir-website/components/_gallery.js";
+
+
 
 
 
@@ -112,26 +118,56 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var isMobile = this.state.width <= 500;
       if (isMobile) return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 23
         },
         __self: this
       }, this.props.images.map(function (image, i) {
-        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
+        var _image$thumbnail = image.thumbnail,
+            thumbnailHeight = _image$thumbnail.thumbnailHeight,
+            thumbnailWidth = _image$thumbnail.thumbnailWidth,
+            aspect = thumbnailWidth / thumbnailHeight,
+            height = _this2.state.width / aspect;
+        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_image__WEBPACK_IMPORTED_MODULE_10___default.a, {
           src: image.thumbnail.thumbnail,
           key: image.thumbnail.thumbnail,
           style: {
             width: "100%",
-            verticalAlign: "middle",
-            border: 0,
+            height: height,
             marginBottom: 5
           },
+          loader: react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+            style: {
+              background: 'gray',
+              width: "100%",
+              height: height,
+              marginBottom: 5,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center'
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 31
+            },
+            __self: this
+          }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_pure_loaders__WEBPACK_IMPORTED_MODULE_11__["BallBeat"], {
+            loading: true,
+            color: "#FFFFFF",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 40
+            },
+            __self: this
+          })),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23
+            lineNumber: 28
           },
           __self: this
         });
@@ -139,7 +175,7 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 48
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
@@ -151,10 +187,10 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 49
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_grid_gallery__WEBPACK_IMPORTED_MODULE_10___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_grid_gallery__WEBPACK_IMPORTED_MODULE_12___default.a, {
         onClick: this.openLightbox,
         enableImageSelection: false,
         enableLightbox: false,
@@ -168,10 +204,10 @@ function (_React$Component) {
         }),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 53
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_images__WEBPACK_IMPORTED_MODULE_11___default.a, {
+      })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_images__WEBPACK_IMPORTED_MODULE_13___default.a, {
         images: this.props.images.map(function (_ref2) {
           var lightbox = _ref2.lightbox;
           return lightbox;
@@ -184,7 +220,7 @@ function (_React$Component) {
         isOpen: this.state.lightboxIsOpen,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 61
         },
         __self: this
       }));

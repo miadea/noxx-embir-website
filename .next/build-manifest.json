@@ -1,6 +1,6 @@
 {
   "devFiles": [
-    "static/development/dll/dll_599a58a60c43245180de.js"
+    "static/development/dll/dll_aa8f31c0c93a8f34edc5.js"
   ],
   "pages": {
     "/": [
@@ -15,7 +15,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/about": [
+    "/architecture": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
@@ -23,7 +23,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/products": [
+    "/product": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/retouching": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

@@ -4,9 +4,10 @@ import MobileHeader from './mobile/header'
 
 const LINKS = [
   {name: "Home", url: '/'},
-  {name: "Products", url: '/products'},
+  {name: "Product", url: '/product'},
+  {name: "Retouching", url: '/retouching'},
   {name: "Architecture", url: '/architecture'},
-  {name: "About", url: '/about'},
+  {name: "Contact", url: '/contact'},
 ]
 
 export default class Header extends React.Component {
