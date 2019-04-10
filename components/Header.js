@@ -1,24 +1,33 @@
+import React from 'react'
 import Link from 'next/link'
+import MobileHeader from './mobile/header'
 
-const linkStyle = {
-  marginRight: 15
+const LINKS = [
+  {name: "Home", url: '/'},
+  {name: "Products", url: '/products'},
+  {name: "Architecture", url: '/architecture'},
+  {name: "About", url: '/about'},
+]
+
+export default class Header extends React.Component {
+  styles = {
+    linkStyle: {
+      marginRight: 15
+    }
+  }
+  render() {
+    let {styles} = this;
+    return(
+      <div>
+        <MobileHeader links={LINKS}/>
+        <div className='header-desktop'>
+          {LINKS.map(({name, url}) => {
+            return <Link href={url} key={url}>
+              <a style={styles.linkStyle}>{name}</a>
+            </Link>
+          })}
+        </div>
+      </div>
+    )
+  }
 }
-
-const Header = () => (
-  <div>
-    <Link href="/">
-      <a style={linkStyle}>Home</a>
-    </Link>
-    <Link href="/products">
-      <a style={linkStyle}>Products</a>
-    </Link>
-    <Link href="/architecture">
-      <a style={linkStyle}>Architecture</a>
-    </Link>
-    <Link href="/about">
-      <a style={linkStyle}>About</a>
-    </Link>
-  </div>
-)
-
-export default Header
