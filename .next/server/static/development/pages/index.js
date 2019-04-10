@@ -305,6 +305,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var react_scrolllock__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-scrolllock */ "react-scrolllock");
+/* harmony import */ var react_scrolllock__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_scrolllock__WEBPACK_IMPORTED_MODULE_10__);
 
 
 
@@ -314,6 +316,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/Users/kestanous/dev/play/noxx-embir-website/components/mobile/header.js";
+
 
 
 
@@ -397,7 +400,7 @@ function (_React$Component) {
           name: name,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 33
+            lineNumber: 34
           },
           __self: this
         });
@@ -406,7 +409,7 @@ function (_React$Component) {
         className: "header-mobile",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 39
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
@@ -414,7 +417,7 @@ function (_React$Component) {
         onClick: this.handleMenuClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 40
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(MenuButton, {
@@ -422,31 +425,37 @@ function (_React$Component) {
         color: "white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 41
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: styles.logo,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 42
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: styles.logoSub,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 42
         },
         __self: this
       }, "Noxx Embir Photography"))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Menu, {
         open: open,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 44
         },
         __self: this
-      }, menuItems));
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_scrolllock__WEBPACK_IMPORTED_MODULE_10___default.a, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 45
+        },
+        __self: this
+      }, menuItems)));
     }
   }]);
 
@@ -517,14 +526,14 @@ function (_React$Component2) {
         style: styles.container,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 106
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
         href: this.props.url,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 107
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
@@ -534,21 +543,21 @@ function (_React$Component2) {
         onClick: this.props.onClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 108
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
         style: styles.linkStyle,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 110
         },
         __self: this
       }, this.props.name))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: styles.line,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 113
         },
         __self: this
       }));
@@ -610,14 +619,14 @@ function (_React$Component3) {
         style: styles.container,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 151
+          lineNumber: 154
         },
         __self: this
       }, this.state.open ? react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: styles.menuList,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 154
+          lineNumber: 157
         },
         __self: this
       }, this.props.children) : null);
@@ -707,28 +716,28 @@ function (_React$Component4) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 219
+          lineNumber: 222
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, styles.line, styles.lineTop),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 222
+          lineNumber: 225
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, styles.line, styles.lineMiddle),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 223
+          lineNumber: 226
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, styles.line, styles.lineBottom),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 224
+          lineNumber: 227
         },
         __self: this
       }));
@@ -2565,6 +2574,17 @@ module.exports = require("prop-types-exact");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-scrolllock":
+/*!***********************************!*\
+  !*** external "react-scrolllock" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-scrolllock");
 
 /***/ }),
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import ScrollLock, { TouchScrollable } from 'react-scrolllock'
 
 export default class MobileHeader extends React.Component {
   state = {open: false}
@@ -41,7 +42,9 @@ export default class MobileHeader extends React.Component {
           <div style={styles.logo}><div style={styles.logoSub}>Noxx Embir Photography</div></div>
         </div>
         <Menu open={open}>
-          {menuItems}
+          <ScrollLock>
+            {menuItems}
+          </ScrollLock>
         </Menu>
       </div>
     )

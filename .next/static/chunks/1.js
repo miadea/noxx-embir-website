@@ -1835,54 +1835,6 @@ module.exports = _interopRequireDefault;
 
 /***/ }),
 
-/***/ "./node_modules/exenv/index.js":
-/*!*************************************!*\
-  !*** ./node_modules/exenv/index.js ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_RESULT__;/*!
-  Copyright (c) 2015 Jed Watson.
-  Based on code that is Copyright 2013-2015, Facebook, Inc.
-  All rights reserved.
-*/
-/* global define */
-
-(function () {
-	'use strict';
-
-	var canUseDOM = !!(
-		typeof window !== 'undefined' &&
-		window.document &&
-		window.document.createElement
-	);
-
-	var ExecutionEnvironment = {
-
-		canUseDOM: canUseDOM,
-
-		canUseWorkers: typeof Worker !== 'undefined',
-
-		canUseEventListeners:
-			canUseDOM && !!(window.addEventListener || window.attachEvent),
-
-		canUseViewport: canUseDOM && !!window.screen
-
-	};
-
-	if (true) {
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = (function () {
-			return ExecutionEnvironment;
-		}).call(exports, __webpack_require__, exports, module),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	} else {}
-
-}());
-
-
-/***/ }),
-
 /***/ "./node_modules/fbjs/lib/camelize.js":
 /*!*******************************************!*\
   !*** ./node_modules/fbjs/lib/camelize.js ***!
@@ -6432,17 +6384,6 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./node_modules/react-dom/index.js":
-/*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_7aff549c98b978433226 ***!
-  \***********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/react-dom/index.js");
-
-/***/ }),
-
 /***/ "./node_modules/react-grid-gallery/lib/CheckButton.js":
 /*!************************************************************!*\
   !*** ./node_modules/react-grid-gallery/lib/CheckButton.js ***!
@@ -7404,7 +7345,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _aphrodite = __webpack_require__(/*! aphrodite */ "./node_modules/aphrodite/lib/index.js");
 
-var _reactScrolllock = __webpack_require__(/*! react-scrolllock */ "./node_modules/react-scrolllock/dist/index.js");
+var _reactScrolllock = __webpack_require__(/*! react-scrolllock */ "./node_modules/react-images/node_modules/react-scrolllock/dist/index.js");
 
 var _reactScrolllock2 = _interopRequireDefault(_reactScrolllock);
 
@@ -9266,6 +9207,332 @@ function deepMerge(target) {
 }
 
 exports.default = deepMerge;
+
+/***/ }),
+
+/***/ "./node_modules/react-images/node_modules/react-scrolllock/dist/ScrollLock.js":
+/*!************************************************************************************!*\
+  !*** ./node_modules/react-images/node_modules/react-scrolllock/dist/ScrollLock.js ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _exenv = __webpack_require__(/*! exenv */ "./node_modules/exenv/index.js");
+
+var _reactPropToggle = __webpack_require__(/*! react-prop-toggle */ "./node_modules/react-prop-toggle/dist/index.js");
+
+var _utils = __webpack_require__(/*! ./utils */ "./node_modules/react-images/node_modules/react-scrolllock/dist/utils.js");
+
+var _withTouchListeners = __webpack_require__(/*! ./withTouchListeners */ "./node_modules/react-images/node_modules/react-scrolllock/dist/withTouchListeners.js");
+
+var _withTouchListeners2 = _interopRequireDefault(_withTouchListeners);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var LOCK_COUNT = 0;
+
+var ScrollLock = function (_PureComponent) {
+  _inherits(ScrollLock, _PureComponent);
+
+  function ScrollLock() {
+    _classCallCheck(this, ScrollLock);
+
+    return _possibleConstructorReturn(this, (ScrollLock.__proto__ || Object.getPrototypeOf(ScrollLock)).apply(this, arguments));
+  }
+
+  _createClass(ScrollLock, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      LOCK_COUNT++;
+      if (_exenv.canUseDOM) {
+        this.initialHeight = window.innerHeight;
+      }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      LOCK_COUNT = Math.max(LOCK_COUNT - 1, 0);
+
+      if (_exenv.canUseDOM) {
+        var offset = window.innerHeight - this.initialHeight;
+
+        // adjust scroll if the window has been resized since the lock was engaged
+        if (offset) {
+          window.scrollTo(0, window.pageYOffset + offset);
+        }
+      }
+
+      // reset the initial height in case this scroll lock is used again
+      this.initialHeight = window.innerHeight;
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var accountForScrollbars = this.props.accountForScrollbars;
+
+      // avoid overly incrementing padding
+
+      var scrollbarSpacer = accountForScrollbars && LOCK_COUNT < 1 ? { 'padding-right': (0, _utils.getPadding)() + 'px' } : {};
+
+      var height = (0, _utils.getDocumentHeight)() + 'px';
+
+      return _react2.default.createElement(_reactPropToggle.SimpleToggle, {
+        styles: _extends({
+          'box-sizing': 'border-box', // account for possible declaration `width: 100%;` on body
+          overflow: 'hidden',
+          position: 'relative',
+          height: height
+        }, scrollbarSpacer)
+      });
+    }
+  }]);
+
+  return ScrollLock;
+}(_react.PureComponent);
+
+ScrollLock.defaultProps = {
+  accountForScrollbars: true
+};
+exports.default = (0, _withTouchListeners2.default)(ScrollLock);
+
+/***/ }),
+
+/***/ "./node_modules/react-images/node_modules/react-scrolllock/dist/index.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/react-images/node_modules/react-scrolllock/dist/index.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _ScrollLock = __webpack_require__(/*! ./ScrollLock */ "./node_modules/react-images/node_modules/react-scrolllock/dist/ScrollLock.js");
+
+Object.defineProperty(exports, 'default', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_ScrollLock).default;
+  }
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+
+/***/ "./node_modules/react-images/node_modules/react-scrolllock/dist/utils.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/react-images/node_modules/react-scrolllock/dist/utils.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.preventTouchMove = preventTouchMove;
+exports.allowTouchMove = allowTouchMove;
+exports.preventInertiaScroll = preventInertiaScroll;
+exports.isTouchDevice = isTouchDevice;
+exports.getPadding = getPadding;
+exports.camelToKebab = camelToKebab;
+exports.getWindowHeight = getWindowHeight;
+exports.getDocumentHeight = getDocumentHeight;
+exports.parse = parse;
+function preventTouchMove(e) {
+  e.preventDefault();
+}
+
+function allowTouchMove(e) {
+  e.stopPropagation();
+}
+
+function preventInertiaScroll() {
+  var top = this.scrollTop;
+  var totalScroll = this.scrollHeight;
+  var currentScroll = top + this.offsetHeight;
+
+  if (top === 0) {
+    this.scrollTop = 1;
+  } else if (currentScroll === totalScroll) {
+    this.scrollTop = top - 1;
+  }
+}
+
+// `ontouchstart` check works on most browsers
+// `maxTouchPoints` works on IE10/11 and Surface
+function isTouchDevice() {
+  if (!window) return false;
+  return 'ontouchstart' in window || navigator.maxTouchPoints;
+}
+
+function getPadding() {
+  if (!document || !window) return 0;
+
+  var currentPadding = parseInt(document.body.paddingRight, 10) || 0;
+  var clientWidth = document.body ? document.body.clientWidth : 0;
+  var adjustedPadding = window.innerWidth - clientWidth + currentPadding || 0;
+
+  return adjustedPadding;
+}
+
+function camelToKebab(str) {
+  return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+}
+
+function getWindowHeight() {
+  var multiplier = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+
+  if (window && window.innerHeight) {
+    return window.innerHeight * multiplier;
+  }
+}
+
+function getDocumentHeight() {
+  if (document && document.body) {
+    return document.body.clientHeight;
+  }
+}
+
+function parse(val) {
+  return isNaN(val) ? val : val + 'px';
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-images/node_modules/react-scrolllock/dist/withTouchListeners.js":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/react-images/node_modules/react-scrolllock/dist/withTouchListeners.js ***!
+  \********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+exports.default = withTouchListeners;
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _exenv = __webpack_require__(/*! exenv */ "./node_modules/exenv/index.js");
+
+var _utils = __webpack_require__(/*! ./utils */ "./node_modules/react-images/node_modules/react-scrolllock/dist/utils.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function withTouchListeners(WrappedComponent) {
+  return function (_PureComponent) {
+    _inherits(TouchProvider, _PureComponent);
+
+    function TouchProvider() {
+      var _ref;
+
+      var _temp, _this, _ret;
+
+      _classCallCheck(this, TouchProvider);
+
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = TouchProvider.__proto__ || Object.getPrototypeOf(TouchProvider)).call.apply(_ref, [this].concat(args))), _this), _this.listenerOptions = {
+        capture: false,
+        passive: false
+      }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(TouchProvider, [{
+      key: 'componentDidMount',
+      value: function componentDidMount() {
+        if (!_exenv.canUseDOM) return;
+
+        var touchScrollTarget = this.props.touchScrollTarget;
+
+        var target = document.body;
+
+        // account for touch devices
+        if (target && (0, _utils.isTouchDevice)()) {
+          // Mobile Safari ignores { overflow: hidden } declaration on the body.
+          target.addEventListener('touchmove', _utils.preventTouchMove, this.listenerOptions);
+
+          // Allow scroll on provided target
+          if (touchScrollTarget) {
+            touchScrollTarget.addEventListener('touchstart', _utils.preventInertiaScroll, this.listenerOptions);
+            touchScrollTarget.addEventListener('touchmove', _utils.allowTouchMove, this.listenerOptions);
+          }
+        }
+      }
+    }, {
+      key: 'componentWillUnmount',
+      value: function componentWillUnmount() {
+        if (!_exenv.canUseDOM) return;
+
+        var touchScrollTarget = this.props.touchScrollTarget;
+
+        var target = document.body;
+
+        // remove touch listeners
+        if (target && (0, _utils.isTouchDevice)()) {
+          target.removeEventListener('touchmove', _utils.preventTouchMove, this.listenerOptions);
+
+          if (touchScrollTarget) {
+            touchScrollTarget.removeEventListener('touchstart', _utils.preventInertiaScroll, this.listenerOptions);
+            touchScrollTarget.removeEventListener('touchmove', _utils.allowTouchMove, this.listenerOptions);
+          }
+        }
+      }
+    }, {
+      key: 'render',
+      value: function render() {
+        return _react2.default.createElement(WrappedComponent, this.props);
+      }
+    }]);
+
+    return TouchProvider;
+  }(_react.PureComponent);
+}
 
 /***/ }),
 
@@ -12661,332 +12928,6 @@ exports.MARGIN = '2px';
 exports.LINE_HEIGHT = '35px';
 exports.LINE_WIDTH = '4px';
 //# sourceMappingURL=index.js.map
-
-/***/ }),
-
-/***/ "./node_modules/react-scrolllock/dist/ScrollLock.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/react-scrolllock/dist/ScrollLock.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _exenv = __webpack_require__(/*! exenv */ "./node_modules/exenv/index.js");
-
-var _reactPropToggle = __webpack_require__(/*! react-prop-toggle */ "./node_modules/react-prop-toggle/dist/index.js");
-
-var _utils = __webpack_require__(/*! ./utils */ "./node_modules/react-scrolllock/dist/utils.js");
-
-var _withTouchListeners = __webpack_require__(/*! ./withTouchListeners */ "./node_modules/react-scrolllock/dist/withTouchListeners.js");
-
-var _withTouchListeners2 = _interopRequireDefault(_withTouchListeners);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var LOCK_COUNT = 0;
-
-var ScrollLock = function (_PureComponent) {
-  _inherits(ScrollLock, _PureComponent);
-
-  function ScrollLock() {
-    _classCallCheck(this, ScrollLock);
-
-    return _possibleConstructorReturn(this, (ScrollLock.__proto__ || Object.getPrototypeOf(ScrollLock)).apply(this, arguments));
-  }
-
-  _createClass(ScrollLock, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      LOCK_COUNT++;
-      if (_exenv.canUseDOM) {
-        this.initialHeight = window.innerHeight;
-      }
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      LOCK_COUNT = Math.max(LOCK_COUNT - 1, 0);
-
-      if (_exenv.canUseDOM) {
-        var offset = window.innerHeight - this.initialHeight;
-
-        // adjust scroll if the window has been resized since the lock was engaged
-        if (offset) {
-          window.scrollTo(0, window.pageYOffset + offset);
-        }
-      }
-
-      // reset the initial height in case this scroll lock is used again
-      this.initialHeight = window.innerHeight;
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var accountForScrollbars = this.props.accountForScrollbars;
-
-      // avoid overly incrementing padding
-
-      var scrollbarSpacer = accountForScrollbars && LOCK_COUNT < 1 ? { 'padding-right': (0, _utils.getPadding)() + 'px' } : {};
-
-      var height = (0, _utils.getDocumentHeight)() + 'px';
-
-      return _react2.default.createElement(_reactPropToggle.SimpleToggle, {
-        styles: _extends({
-          'box-sizing': 'border-box', // account for possible declaration `width: 100%;` on body
-          overflow: 'hidden',
-          position: 'relative',
-          height: height
-        }, scrollbarSpacer)
-      });
-    }
-  }]);
-
-  return ScrollLock;
-}(_react.PureComponent);
-
-ScrollLock.defaultProps = {
-  accountForScrollbars: true
-};
-exports.default = (0, _withTouchListeners2.default)(ScrollLock);
-
-/***/ }),
-
-/***/ "./node_modules/react-scrolllock/dist/index.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/react-scrolllock/dist/index.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _ScrollLock = __webpack_require__(/*! ./ScrollLock */ "./node_modules/react-scrolllock/dist/ScrollLock.js");
-
-Object.defineProperty(exports, 'default', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_ScrollLock).default;
-  }
-});
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/***/ }),
-
-/***/ "./node_modules/react-scrolllock/dist/utils.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/react-scrolllock/dist/utils.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.preventTouchMove = preventTouchMove;
-exports.allowTouchMove = allowTouchMove;
-exports.preventInertiaScroll = preventInertiaScroll;
-exports.isTouchDevice = isTouchDevice;
-exports.getPadding = getPadding;
-exports.camelToKebab = camelToKebab;
-exports.getWindowHeight = getWindowHeight;
-exports.getDocumentHeight = getDocumentHeight;
-exports.parse = parse;
-function preventTouchMove(e) {
-  e.preventDefault();
-}
-
-function allowTouchMove(e) {
-  e.stopPropagation();
-}
-
-function preventInertiaScroll() {
-  var top = this.scrollTop;
-  var totalScroll = this.scrollHeight;
-  var currentScroll = top + this.offsetHeight;
-
-  if (top === 0) {
-    this.scrollTop = 1;
-  } else if (currentScroll === totalScroll) {
-    this.scrollTop = top - 1;
-  }
-}
-
-// `ontouchstart` check works on most browsers
-// `maxTouchPoints` works on IE10/11 and Surface
-function isTouchDevice() {
-  if (!window) return false;
-  return 'ontouchstart' in window || navigator.maxTouchPoints;
-}
-
-function getPadding() {
-  if (!document || !window) return 0;
-
-  var currentPadding = parseInt(document.body.paddingRight, 10) || 0;
-  var clientWidth = document.body ? document.body.clientWidth : 0;
-  var adjustedPadding = window.innerWidth - clientWidth + currentPadding || 0;
-
-  return adjustedPadding;
-}
-
-function camelToKebab(str) {
-  return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
-}
-
-function getWindowHeight() {
-  var multiplier = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-
-  if (window && window.innerHeight) {
-    return window.innerHeight * multiplier;
-  }
-}
-
-function getDocumentHeight() {
-  if (document && document.body) {
-    return document.body.clientHeight;
-  }
-}
-
-function parse(val) {
-  return isNaN(val) ? val : val + 'px';
-}
-
-/***/ }),
-
-/***/ "./node_modules/react-scrolllock/dist/withTouchListeners.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/react-scrolllock/dist/withTouchListeners.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-exports.default = withTouchListeners;
-
-var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _exenv = __webpack_require__(/*! exenv */ "./node_modules/exenv/index.js");
-
-var _utils = __webpack_require__(/*! ./utils */ "./node_modules/react-scrolllock/dist/utils.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-function withTouchListeners(WrappedComponent) {
-  return function (_PureComponent) {
-    _inherits(TouchProvider, _PureComponent);
-
-    function TouchProvider() {
-      var _ref;
-
-      var _temp, _this, _ret;
-
-      _classCallCheck(this, TouchProvider);
-
-      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-      }
-
-      return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = TouchProvider.__proto__ || Object.getPrototypeOf(TouchProvider)).call.apply(_ref, [this].concat(args))), _this), _this.listenerOptions = {
-        capture: false,
-        passive: false
-      }, _temp), _possibleConstructorReturn(_this, _ret);
-    }
-
-    _createClass(TouchProvider, [{
-      key: 'componentDidMount',
-      value: function componentDidMount() {
-        if (!_exenv.canUseDOM) return;
-
-        var touchScrollTarget = this.props.touchScrollTarget;
-
-        var target = document.body;
-
-        // account for touch devices
-        if (target && (0, _utils.isTouchDevice)()) {
-          // Mobile Safari ignores { overflow: hidden } declaration on the body.
-          target.addEventListener('touchmove', _utils.preventTouchMove, this.listenerOptions);
-
-          // Allow scroll on provided target
-          if (touchScrollTarget) {
-            touchScrollTarget.addEventListener('touchstart', _utils.preventInertiaScroll, this.listenerOptions);
-            touchScrollTarget.addEventListener('touchmove', _utils.allowTouchMove, this.listenerOptions);
-          }
-        }
-      }
-    }, {
-      key: 'componentWillUnmount',
-      value: function componentWillUnmount() {
-        if (!_exenv.canUseDOM) return;
-
-        var touchScrollTarget = this.props.touchScrollTarget;
-
-        var target = document.body;
-
-        // remove touch listeners
-        if (target && (0, _utils.isTouchDevice)()) {
-          target.removeEventListener('touchmove', _utils.preventTouchMove, this.listenerOptions);
-
-          if (touchScrollTarget) {
-            touchScrollTarget.removeEventListener('touchstart', _utils.preventInertiaScroll, this.listenerOptions);
-            touchScrollTarget.removeEventListener('touchmove', _utils.allowTouchMove, this.listenerOptions);
-          }
-        }
-      }
-    }, {
-      key: 'render',
-      value: function render() {
-        return _react2.default.createElement(WrappedComponent, this.props);
-      }
-    }]);
-
-    return TouchProvider;
-  }(_react.PureComponent);
-}
 
 /***/ }),
 

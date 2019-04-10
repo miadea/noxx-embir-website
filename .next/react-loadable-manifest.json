@@ -401,8 +401,8 @@
   ],
   "./ScrollLock": [
     {
-      "id": "./node_modules/react-scrolllock/dist/ScrollLock.js",
-      "name": "./node_modules/react-scrolllock/dist/ScrollLock.js",
+      "id": "./node_modules/react-images/node_modules/react-scrolllock/dist/ScrollLock.js",
+      "name": "./node_modules/react-images/node_modules/react-scrolllock/dist/ScrollLock.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     }
@@ -801,8 +801,8 @@
   ],
   "./utils": [
     {
-      "id": "./node_modules/react-scrolllock/dist/utils.js",
-      "name": "./node_modules/react-scrolllock/dist/utils.js",
+      "id": "./node_modules/react-images/node_modules/react-scrolllock/dist/utils.js",
+      "name": "./node_modules/react-images/node_modules/react-scrolllock/dist/utils.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     }
@@ -849,8 +849,8 @@
   ],
   "./withTouchListeners": [
     {
-      "id": "./node_modules/react-scrolllock/dist/withTouchListeners.js",
-      "name": "./node_modules/react-scrolllock/dist/withTouchListeners.js",
+      "id": "./node_modules/react-images/node_modules/react-scrolllock/dist/withTouchListeners.js",
+      "name": "./node_modules/react-images/node_modules/react-scrolllock/dist/withTouchListeners.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     }
@@ -987,14 +987,6 @@
     {
       "id": "./node_modules/dom-helpers/class/removeClass.js",
       "name": "./node_modules/dom-helpers/class/removeClass.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    }
-  ],
-  "exenv": [
-    {
-      "id": "./node_modules/exenv/index.js",
-      "name": "./node_modules/exenv/index.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     }
@@ -1225,8 +1217,8 @@
   ],
   "react-scrolllock": [
     {
-      "id": "./node_modules/react-scrolllock/dist/index.js",
-      "name": "./node_modules/react-scrolllock/dist/index.js",
+      "id": "./node_modules/react-images/node_modules/react-scrolllock/dist/index.js",
+      "name": "./node_modules/react-images/node_modules/react-scrolllock/dist/index.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     }
