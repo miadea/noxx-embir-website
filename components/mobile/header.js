@@ -1,12 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
-import ScrollLock, { TouchScrollable } from 'react-scrolllock'
+import ScrollLock from 'react-scrolllock'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { withRouter } from 'next/router'
 
-export default class MobileHeader extends React.Component {
+class MobileHeader extends React.Component {
   state = {open: false}
   styles = {
     container: {
-      position: 'absolute',
+      position: 'fixed',
       top: 0,
       left: 0,
       zIndex: '99',
@@ -29,12 +31,9 @@ export default class MobileHeader extends React.Component {
     }
   }
   render() {
-    let {open} = this.state, {styles} = this;
-
+    let {open} = this.state, {styles} = this, {router} = this.props
     const menuItems = this.props.links.map(({name, url}, i)=> (<MenuItem key={url} onClick={this.handleLinkClick}
-     delay={`${i * 0.1}s`} url={url} name={name}/>));
-
-
+     delay={`${i * 0.1}s`} url={url} name={name} selected={router.pathname == url}/>));
     return(
       <div className='header-mobile'>
         <div style={styles.container}  onClick={this.handleMenuClick}>
@@ -45,6 +44,29 @@ export default class MobileHeader extends React.Component {
           <ScrollLock>
             {menuItems}
           </ScrollLock>
+          <div style={{
+            marginTop: 50,
+            width: "100%",
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center' }}>
+            <ReactCSSTransitionGroup
+              transitionName="example"
+              transitionAppear
+              transitionAppearTimeout={1500}
+              transitionEnterTimeout={0}
+              transitionLeaveTimeout={0}>
+              <div style={{
+                background: 'white',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderRadius: "50%",
+                width: 165, height: 165 }}>
+                <img src='/static/noxx_embir_logo.svg' style={{width: 160, height: 160}}/>
+              </div>
+            </ReactCSSTransitionGroup>
+          </div>
         </Menu>
       </div>
     )
@@ -54,6 +76,57 @@ export default class MobileHeader extends React.Component {
   }
   handleMenuClick = () => {
     this.setState({open: !this.state.open});
+  }
+}
+export default withRouter(MobileHeader)
+
+class Menu extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={
+      open: this.props.open? this.props.open:false,
+    }
+  }
+  componentWillReceiveProps(nextProps){
+    if(nextProps.open !== this.state.open){
+      this.setState({open:nextProps.open});
+    }
+  }
+  render(){
+    const styles={
+      container: {
+        position: "fixed",
+        top: 0,
+        left: 0,
+        height: this.state.open? '100%': 0,
+        width: '100vw',
+        display: 'flex',
+        flexDirection: 'column',
+        background: 'black',
+        opacity: 1,
+        color: '#fafafa',
+        transition: 'height 0.3s ease',
+        zIndex: 2
+      },
+      subContainer: {
+        height: 550,
+        overflowY: 'auto'
+      },
+      menuList: {
+        paddingTop: '3rem',
+      }
+    }
+    return(
+      <div style={styles.container}>
+        <div style={styles.subContainer}>
+          {this.state.open ?
+            <div style={styles.menuList}>
+              {this.props.children}
+            </div>
+          : null }
+        </div>
+      </div>
+    )
   }
 }
 
@@ -70,7 +143,9 @@ class MenuItem extends React.Component{
     this.setState({hover:!this.state.hover});
   }
 
-  render(){
+  render() {
+    let color = this.state.hover ? "gray" : "#fafafa"
+    color = this.props.selected ? "#ed1c24" : color
     const styles={
       container: {
         opacity: 0,
@@ -83,10 +158,10 @@ class MenuItem extends React.Component{
         padding: '1rem 0',
         margin: '0 5%',
         cursor: 'pointer',
-        color: this.state.hover? 'gray':'#fafafa',
+        color,
         transition: 'color 0.2s ease-in-out',
         animation: '0.5s slideIn forwards',
-        animationDelay:this.props.delay,
+        animationDelay: this.props.delay
 
       },
       line: {
@@ -95,7 +170,7 @@ class MenuItem extends React.Component{
         background: 'gray',
         margin: '0 auto',
         animation: '0.5s shrink forwards',
-        animationDelay:this.props.delay,
+        animationDelay: this.props.delay
 
       },
       linkStyle: {
@@ -112,53 +187,6 @@ class MenuItem extends React.Component{
         </Link>
       <div style={styles.line}/>
     </div>
-    )
-  }
-}
-
-class Menu extends React.Component {
-  constructor(props){
-    super(props);
-    this.state={
-      open: this.props.open? this.props.open:false,
-    }
-  }
-
-  componentWillReceiveProps(nextProps){
-    if(nextProps.open !== this.state.open){
-      this.setState({open:nextProps.open});
-    }
-  }
-
-  render(){
-    const styles={
-      container: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        height: this.state.open? '100%': 0,
-        width: '100vw',
-        display: 'flex',
-        flexDirection: 'column',
-        background: 'black',
-        opacity: 0.95,
-        color: '#fafafa',
-        transition: 'height 0.3s ease',
-        zIndex: 2,
-      },
-      menuList: {
-        paddingTop: '3rem',
-      }
-    }
-    return(
-      <div style={styles.container}>
-        {
-          this.state.open?
-            <div style={styles.menuList}>
-              {this.props.children}
-            </div>:null
-        }
-      </div>
     )
   }
 }

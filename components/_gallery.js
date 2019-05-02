@@ -18,7 +18,7 @@ export default class GalleryPage extends React.Component {
     window.removeEventListener('resize', this.handleWindowSizeChange);
   }
   render() {
-    const isMobile = this.state.width <= 500;
+    const isMobile = this.state.width <= 600;
     if (isMobile) return (
       <div>
         {this.props.images.map((image, i) => {
@@ -26,7 +26,7 @@ export default class GalleryPage extends React.Component {
           , aspect = thumbnailWidth / thumbnailHeight
           , height = this.state.width / aspect
           return<Img src={image.thumbnail.thumbnail} key={image.thumbnail.thumbnail}
-            style={{ width: "100%", height,  marginBottom: 5 }}
+            style={{ width: "100%",  marginBottom: 5 }}
             loader={
               <div style={{
                 background: 'gray',
@@ -45,10 +45,13 @@ export default class GalleryPage extends React.Component {
       </div>
     )
     return (
-      <div>
+      <div style={{
+          padding: "10px 30px 30px 30px"
+        }}>
+
         <div style={{
           display: "block", minHeight: 1,
-          width: "100%", overflow: "auto"
+          width: "100%", overflow: "auto",
         }}>
           <Gallery onClick={this.openLightbox}
             enableImageSelection={false}
@@ -56,6 +59,7 @@ export default class GalleryPage extends React.Component {
             rowHeight={450}
             onClickThumbnail={this.openLightbox}
             images={this.props.images.map(({thumbnail}) => ({...thumbnail, src: ''}))}
+            margin={3}
           />
         </div>
         <Lightbox images={this.props.images.map(({lightbox}) => lightbox )}

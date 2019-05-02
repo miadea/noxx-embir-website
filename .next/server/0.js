@@ -38,7 +38,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/kestanous/dev/play/noxx-embir-website/components/_gallery.js";
+var _jsxFileName = "/Users/emmastoumen/dev/noxx-embir-website/components/_gallery.js";
 
 
 
@@ -120,7 +120,7 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      var isMobile = this.state.width <= 500;
+      var isMobile = this.state.width <= 600;
       if (isMobile) return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
@@ -138,7 +138,6 @@ function (_React$Component) {
           key: image.thumbnail.thumbnail,
           style: {
             width: "100%",
-            height: height,
             marginBottom: 5
           },
           loader: react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
@@ -173,6 +172,9 @@ function (_React$Component) {
         });
       }));
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+        style: {
+          padding: "10px 30px 30px 30px"
+        },
         __source: {
           fileName: _jsxFileName,
           lineNumber: 48
@@ -187,7 +189,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 52
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_grid_gallery__WEBPACK_IMPORTED_MODULE_12___default.a, {
@@ -202,9 +204,10 @@ function (_React$Component) {
             src: ''
           });
         }),
+        margin: 3,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 56
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_images__WEBPACK_IMPORTED_MODULE_13___default.a, {
@@ -220,7 +223,7 @@ function (_React$Component) {
         isOpen: this.state.lightboxIsOpen,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 65
         },
         __self: this
       }));

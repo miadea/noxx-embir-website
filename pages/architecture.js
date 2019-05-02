@@ -6,7 +6,7 @@ import IMAGES from '../images/architecture.json'
 export default class Architectures extends React.Component {
   render() {
     return (
-      <Layout>
+      <Layout title="Architecture">
         <Gallery images={IMAGES} />
       </Layout>
     )

@@ -121,7 +121,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -163,18 +163,20 @@ var DynamicComponent = next_dynamic__WEBPACK_IMPORTED_MODULE_0___default()(funct
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Header; });
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _mobile_header__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./mobile/header */ "./components/mobile/header.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_10__);
 
 
 
@@ -182,16 +184,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/kestanous/dev/play/noxx-embir-website/components/Header.js";
+var _jsxFileName = "/Users/emmastoumen/dev/noxx-embir-website/components/Header.js";
+
 
 
 
 var LINKS = [{
-  name: "Home",
-  url: '/'
-}, {
   name: "Product",
-  url: '/product'
+  url: '/'
 }, {
   name: "Retouching",
   url: '/retouching'
@@ -206,74 +206,38 @@ var LINKS = [{
 var Header =
 /*#__PURE__*/
 function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Header, _React$Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(Header, _React$Component);
 
   function Header() {
-    var _getPrototypeOf2;
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Header);
 
-    var _this;
-
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Header);
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, (_getPrototypeOf2 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Header)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "styles", {
-      linkStyle: {
-        marginRight: 15
-      }
-    });
-
-    return _this;
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(Header).apply(this, arguments));
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Header, [{
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(Header, [{
     key: "render",
     value: function render() {
-      var styles = this.styles;
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 16
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_mobile_header__WEBPACK_IMPORTED_MODULE_9__["default"], {
         links: LINKS,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 17
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "header-desktop",
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DesktopHeader, {
+        links: LINKS,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 18
         },
         __self: this
-      }, LINKS.map(function (_ref) {
-        var name = _ref.name,
-            url = _ref.url;
-        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
-          href: url,
-          key: url,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 26
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-          style: styles.linkStyle,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 27
-          },
-          __self: this
-        }, name));
-      })));
+      }));
     }
   }]);
 
@@ -281,6 +245,203 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component);
 
 
+
+var DesktopHeader =
+/*#__PURE__*/
+function (_React$Component2) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(DesktopHeader, _React$Component2);
+
+  function DesktopHeader() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, DesktopHeader);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, (_getPrototypeOf2 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(DesktopHeader)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "styles", {
+      nav: {
+        fontSize: "1.5rem",
+        height: 100,
+        width: '100%',
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
+      },
+      titleLogoContainer: {
+        flex: 1,
+        paddingLeft: 100
+      },
+      titleLogo: {
+        height: 60
+      },
+      fakeLink: {
+        flex: 1
+      }
+    });
+
+    return _this;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(DesktopHeader, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var styles = this.styles;
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "header-desktop",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        style: styles.nav,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        style: styles.titleLogoContainer,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+        style: styles.titleLogo,
+        src: "/static/TitleLogoWhite.png",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51
+        },
+        __self: this
+      })), LINKS.map(function (_ref) {
+        var name = _ref.name,
+            url = _ref.url;
+        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DesktopHeaderLink, {
+          key: url,
+          name: name,
+          url: url,
+          selected: url == _this2.props.router.pathname,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 54
+          },
+          __self: this
+        });
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        style: styles.fakeLink,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56
+        },
+        __self: this
+      })));
+    }
+  }]);
+
+  return DesktopHeader;
+}(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component);
+
+DesktopHeader = Object(next_router__WEBPACK_IMPORTED_MODULE_10__["withRouter"])(DesktopHeader);
+
+var DesktopHeaderLink =
+/*#__PURE__*/
+function (_React$Component3) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(DesktopHeaderLink, _React$Component3);
+
+  function DesktopHeaderLink() {
+    var _getPrototypeOf3;
+
+    var _this3;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, DesktopHeaderLink);
+
+    for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+      args[_key2] = arguments[_key2];
+    }
+
+    _this3 = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, (_getPrototypeOf3 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(DesktopHeaderLink)).call.apply(_getPrototypeOf3, [this].concat(args)));
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this3), "styles", {
+      linkStyle: {
+        marginRight: 15,
+        padding: "50px",
+        textDecoration: "none",
+        color: "white"
+      },
+      hoverStyle: {
+        marginRight: 15,
+        padding: "50px",
+        textDecoration: "none",
+        color: "gray"
+      },
+      selectedStyle: {
+        marginRight: 15,
+        padding: "50px",
+        textDecoration: "none",
+        color: "#ed1c24"
+      }
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this3), "state", {
+      hover: false
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this3), "handleHover", function () {
+      _this3.setState({
+        hover: !_this3.state.hover
+      });
+    });
+
+    return _this3;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(DesktopHeaderLink, [{
+    key: "render",
+    value: function render() {
+      var _this$styles = this.styles,
+          linkStyle = _this$styles.linkStyle,
+          hoverStyle = _this$styles.hoverStyle,
+          selectedStyle = _this$styles.selectedStyle,
+          _this$props = this.props,
+          name = _this$props.name,
+          url = _this$props.url,
+          selected = _this$props.selected,
+          hover = this.state.hover,
+          style = linkStyle;
+      if (hover) style = hoverStyle;
+      if (selected) style = selectedStyle;
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: url,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 97
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+        onMouseEnter: this.handleHover,
+        onMouseLeave: this.handleHover,
+        style: style,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98
+        },
+        __self: this
+      }, name));
+    }
+  }]);
+
+  return DesktopHeaderLink;
+}(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component);
 
 /***/ }),
 
@@ -293,53 +454,208 @@ function (_React$Component) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
-var _jsxFileName = "/Users/kestanous/dev/play/noxx-embir-website/components/MyLayout.js";
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
 
 
 
 
-var Layout = function Layout(props) {
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    style: styles.main,
-    className: "jsx-2513598150" + " " + 'layout',
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 3
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "jsx-2513598150" + " " + "main",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
-  }, props.children), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "2513598150",
-    __self: this
-  }, "body{background:black;color:white;margin:0px;padding:0px;}.main{-webkit-flex:1;-ms-flex:1;flex:1;display:block;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100vw;height:100vh;padding-top:52px;}@-webkit-keyframes appear{0%{opacity:0;}100%{opacity:1;}}@keyframes appear{0%{opacity:0;}100%{opacity:1;}}@-webkit-keyframes slideIn{0%{-webkit-transform:translateX(-2%);-ms-transform:translateX(-2%);transform:translateX(-2%);}100%{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);}}@keyframes slideIn{0%{-webkit-transform:translateX(-2%);-ms-transform:translateX(-2%);transform:translateX(-2%);}100%{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);}}@-webkit-keyframes shrink{0%{width:95%;}100%{width:90%;}}@keyframes shrink{0%{width:95%;}100%{width:90%;}}.header-desktop{display:none;}@media only screen and (min-width:501px){.ReactGridGallery_tile-viewport:hover{background:black;}.ReactGridGallery_tile-viewport:hover img{opacity:0.7;}.layout{padding:0 16px;}.main{padding-top:0px;}.header-desktop{margin:0 -16px;display:block;}.header-mobile{display:none !important;}}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9rZXN0YW5vdXMvZGV2L3BsYXkvbm94eC1lbWJpci13ZWJzaXRlL2NvbXBvbmVudHMvTXlMYXlvdXQuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBT3VCLEFBRzBCLEFBTVYsQUFVSyxBQUdBLEFBS2dCLEFBR0YsQUFLZCxBQUdBLEFBS0MsQUFJTSxBQUdMLEFBR0csQUFHQyxBQUdELEFBSVMsVUEzQzFCLEFBR0EsQUFhQSxBQUdBLEVBWUEsQ0FQRixFQVVFLEFBTWdCLENBSGhCLENBckRZLEFBNENaLE9BZ0JBLEtBM0RXLEFBd0RYLElBbkRjLE9BSkgsT0FLVyxLQUp4QixnQ0F3QkUsTUFIQSxtQ0FoQm1CLDZGQUNQLFlBQ0MsYUFDSSxpQkFDbkIiLCJmaWxlIjoiL1VzZXJzL2tlc3Rhbm91cy9kZXYvcGxheS9ub3h4LWVtYmlyLXdlYnNpdGUvY29tcG9uZW50cy9NeUxheW91dC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBIZWFkZXIgZnJvbSAnLi9IZWFkZXInXG5jb25zdCBMYXlvdXQgPSBwcm9wcyA9PiAoXG4gIDxkaXYgY2xhc3NOYW1lPSdsYXlvdXQnIHN0eWxlPXtzdHlsZXMubWFpbn0+XG4gICAgPEhlYWRlciAvPlxuICAgIDxkaXYgY2xhc3NOYW1lPVwibWFpblwiPlxuICAgICAge3Byb3BzLmNoaWxkcmVufVxuICAgIDwvZGl2PlxuICAgIDxzdHlsZSBqc3ggZ2xvYmFsPntgXG4gICAgICBib2R5IHtcbiAgICAgICAgYmFja2dyb3VuZDogYmxhY2s7XG4gICAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICAgICAgbWFyZ2luOiAwcHg7XG4gICAgICAgIHBhZGRpbmcgMHB4O1xuICAgICAgfVxuICAgICAgLm1haW4ge1xuICAgICAgICBmbGV4OiAxO1xuICAgICAgICBkaXNwbGF5OiBibG9jaztcbiAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDEwMHZ3O1xuICAgICAgICBoZWlnaHQ6IDEwMHZoO1xuICAgICAgICBwYWRkaW5nLXRvcDogNTJweDtcbiAgICAgIH1cbiAgICAgIEBrZXlmcmFtZXMgYXBwZWFyIHtcbiAgICAgICAgMCUge1xuICAgICAgICAgIG9wYWNpdHk6IDA7XG4gICAgICAgIH1cbiAgICAgICAgMTAwJSB7XG4gICAgICAgICAgb3BhY2l0eTogMTtcbiAgICAgICAgfVxuICAgICAgfVxuICAgICAgQGtleWZyYW1lcyBzbGlkZUluIHtcbiAgICAgICAgMCUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgtMiUpO1xuICAgICAgICB9XG4gICAgICAgIDEwMCUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgwKTtcbiAgICAgICAgfVxuICAgICAgfVxuICAgICAgQGtleWZyYW1lcyBzaHJpbmsge1xuICAgICAgICAwJSB7XG4gICAgICAgICAgd2lkdGg6IDk1JTtcbiAgICAgICAgfVxuICAgICAgICAxMDAlIHtcbiAgICAgICAgICB3aWR0aDogOTAlO1xuICAgICAgICB9XG4gICAgICB9XG5cbiAgICAgIC5oZWFkZXItZGVza3RvcCB7XG4gICAgICAgIGRpc3BsYXk6IG5vbmU7XG4gICAgICB9XG4gICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDUwMXB4KSB7XG4gICAgICAgIC5SZWFjdEdyaWRHYWxsZXJ5X3RpbGUtdmlld3BvcnQ6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IGJsYWNrO1xuICAgICAgICB9XG4gICAgICAgIC5SZWFjdEdyaWRHYWxsZXJ5X3RpbGUtdmlld3BvcnQ6aG92ZXIgaW1nIHtcbiAgICAgICAgICBvcGFjaXR5OiAwLjc7XG4gICAgICAgIH1cbiAgICAgICAgLmxheW91dCB7XG4gICAgICAgICAgcGFkZGluZzogMCAxNnB4O1xuICAgICAgICB9XG4gICAgICAgIC5tYWluIHtcbiAgICAgICAgICBwYWRkaW5nLXRvcDogMHB4O1xuICAgICAgICB9XG4gICAgICAgIC5oZWFkZXItZGVza3RvcCB7XG4gICAgICAgICAgbWFyZ2luOiAwIC0xNnB4O1xuICAgICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgICB9XG4gICAgICAgIC5oZWFkZXItbW9iaWxlIHtcbiAgICAgICAgICBkaXNwbGF5OiBub25lICFpbXBvcnRhbnQ7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICBgfTwvc3R5bGU+XG4gIDwvZGl2PlxuKVxuXG5leHBvcnQgZGVmYXVsdCBMYXlvdXRcblxuY29uc3Qgc3R5bGVzID0ge1xuICBtYWluOiB7XG4gICAgZGlzcGxheTonZmxleCcsXG4gICAgZmxleERpcmVjdGlvbjonY29sdW1uJyxcbiAgICBhbGlnbkl0ZW1zOiAnY2VudGVyJyxcbiAgICBoZWlnaHQ6ICcxMDB2aCcsXG4gIH1cbn1cbiJdfQ== */\n/*@ sourceURL=/Users/kestanous/dev/play/noxx-embir-website/components/MyLayout.js */"));
-};
 
-/* harmony default export */ __webpack_exports__["default"] = (Layout);
-var styles = {
-  main: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    height: '100vh'
+
+
+var _jsxFileName = "/Users/emmastoumen/dev/noxx-embir-website/components/MyLayout.js";
+
+
+
+
+
+
+var Layout =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Layout, _React$Component);
+
+  function Layout() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Layout);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, (_getPrototypeOf2 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Layout)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "state", {
+      hackerCount: 0
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "contextMenu", function (e) {
+      if ('/contact' == _this.props.router.pathname) return true;
+      e.preventDefault();
+      var hackerCount = _this.state.hackerCount;
+      hackerCount = ++hackerCount;
+      if (hackerCount > 1) alert("Copyright \xA9 2019 Noxx Embir. You have done this ".concat(hackerCount, " times. Your IP Address may be logged."));else alert("Copyright © 2019 Noxx Embir.");
+
+      _this.setState({
+        hackerCount: hackerCount
+      });
+
+      return false;
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "keypress", function (e) {
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "drag", function (e) {
+      var hackerCount = _this.state.hackerCount;
+      hackerCount = ++hackerCount;
+      e.preventDefault();
+      if (hackerCount > 1) alert("Copyright © 2019 Noxx Embir.");
+
+      _this.setState({
+        hackerCount: hackerCount
+      });
+
+      return false;
+    });
+
+    return _this;
   }
-};
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Layout, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      document.body.addEventListener('contextmenu', this.contextMenu);
+      document.body.addEventListener('keydown', this.keypress);
+      document.body.addEventListener('dragstart', this.drag);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      document.body.removeEventListener('contextmenu', this.contextMenu);
+      document.body.removeEventListener('keydown', this.keypress);
+      document.body.removeEventListener('dragstart', this.drag);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        className: "jsx-712866214" + " " + 'layout',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_10___default.a, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 44
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("meta", {
+        name: "description",
+        content: "Noxx Embir works with clients to provide high quality product photography and digital retouching. Contact Noxx to discuss any project ideas.",
+        className: "jsx-712866214",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 45
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("meta", {
+        name: "google-site-verification",
+        content: "fsilsDoagPiiPSunzPwNGRuLcOQ_leWm6GhsJ1oCb9o",
+        className: "jsx-712866214",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("link", {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/static/favicon.ico",
+        className: "jsx-712866214",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 47
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("link", {
+        href: "https://fonts.googleapis.com/css?family=Lato:300",
+        rel: "stylesheet",
+        className: "jsx-712866214",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("link", {
+        href: "https://fonts.googleapis.com/css?family=Roboto+Slab:300",
+        rel: "stylesheet",
+        className: "jsx-712866214",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("title", {
+        className: "jsx-712866214",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50
+        },
+        __self: this
+      }, this.props.title || "Noxx Embir")), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("header", {
+        className: "jsx-712866214",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        className: "jsx-712866214" + " " + "main",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        },
+        __self: this
+      }, this.props.children), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_7___default.a, {
+        id: "712866214",
+        __self: this
+      }, "body{background:black;color:white;margin:0px;padding:0px;font-family:'Lato',sans-serif;}.layout{position:absolute;top:0;left:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:100vh;}.main{-webkit-flex:1;-ms-flex:1;flex:1;display:block;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100vw;height:100vh;padding-top:52px;}@-webkit-keyframes appear{0%{opacity:0;}100%{opacity:1;}}@keyframes appear{0%{opacity:0;}100%{opacity:1;}}@-webkit-keyframes slideIn{0%{-webkit-transform:translateX(-2%);-ms-transform:translateX(-2%);transform:translateX(-2%);}100%{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);}}@keyframes slideIn{0%{-webkit-transform:translateX(-2%);-ms-transform:translateX(-2%);transform:translateX(-2%);}100%{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);}}@-webkit-keyframes shrink{0%{width:95%;}100%{width:90%;}}@keyframes shrink{0%{width:95%;}100%{width:90%;}}.header-desktop{display:none;}.example-appear{opacity:0.01;}.example-appear.example-appear-active{opacity:1;-webkit-transition:opacity 1s ease;transition:opacity 1s ease;-webkit-transition-delay:0.5s;transition-delay:0.5s;}.contact-container{background-color:#1a1a1a;min-height:calc(100vh - 52px);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}.contact-subcontainer{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:1;-ms-flex:1;flex:1;}.contact{border-radius:5px;padding:10px;margin-right:20px;margin-left:20px;margin-bottom:30px;-webkit-flex:1;-ms-flex:1;flex:1;}.contact input[type=text],.contact input[type=email],.contact select,.contact textarea{width:100%;padding:12px;border:1px solid #ccc;border-radius:4px;box-sizing:border-box;margin-top:6px;margin-bottom:16px;resize:vertical;font-size:1rem;}#message{height:100px;}.contact input[type=submit]{background-color:#ed1c24;color:white;padding:12px 20px;border:none;border-radius:4px;cursor:pointer;font-size:1rem;-webkit-align-self:flex-center;-ms-flex-item-align:center;align-self:flex-center;width:100%;-webkit-appearance:none;}.contact input[type=submit]:hover{background-color:#a50d12;}.about{font-size:1rem;font-family:'Roboto Slab',serif;-webkit-flex:1;-ms-flex:1;flex:1;padding:20px;line-height:200%;text-align:center;}.contact-footer{background-color:black;padding:20px 0 20px 50px;color:gray;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}@media only screen and (max-width:701px){.contact-subcontainer{-webkit-flex-direction:column-reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;}}@media only screen and (min-width:1101px){.ReactGridGallery_tile-viewport:hover{background:black;}.ReactGridGallery_tile-viewport:hover img{opacity:0.7;}.main{padding-top:0px;}.header-desktop{width:100vw;display:block;}.header-mobile{display:none !important;}.contact-container{min-height:calc(100vh - 100px);}.contact{padding:70px;}.contact input[type=submit]{background-color:#ed1c24;color:white;padding:12px 20px;border:none;border-radius:4px;cursor:pointer;font-size:1rem;-webkit-align-self:flex-center;-ms-flex-item-align:center;align-self:flex-center;width:20%;min-width:100px;}.contact input[type=submit]:hover{background-color:#a50d12;}.about{font-size:1.3rem;-webkit-letter-spacing:2px;-moz-letter-spacing:2px;-ms-letter-spacing:2px;letter-spacing:2px;line-height:200%;padding:70px;margin-right:60px;text-align:left;}}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9lbW1hc3RvdW1lbi9kZXYvbm94eC1lbWJpci13ZWJzaXRlL2NvbXBvbmVudHMvTXlMYXlvdXQuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBeUQyQixBQUc4QixBQU9DLEFBU1gsQUFVSyxBQUdBLEFBS2dCLEFBR0YsQUFLZCxBQUdBLEFBS0MsQUFJQSxBQUlILEFBTWUsQUFPWixBQUtLLEFBU1AsQUFZRSxBQUlZLEFBYUEsQUFJVixBQVNRLEFBVVMsQUFNYixBQUdMLEFBTUksQUFJSixBQUlZLEFBSU8sQUFJbEIsQUFJWSxBQWFBLEFBSVIsVUFsS25CLEFBR0EsQUFhQSxBQUdBLEFBYTJCLENBMkJkLENBNkRiLEFBVWdCLENBMUdsQixBQUlBLEFBMkNBLEFBdUVFLEVBbERpQyxDQWtDakMsQ0F4SlksQUErSVosQUE4Q3FCLENBdExmLEFBcUVPLEtBbURZLENBdkhsQixBQThFZSxBQTBFdEIsQ0FoRzhCLEFBcUNsQixBQWFkLEFBMERnQixBQWFkLENBNUJBLEdBNUpXLEVBUUUsQUFvRUssQUF1RmxCLEVBcEpjLElBc0ZJLEFBdUVFLEdBM0tULE1BcUZPLENBdEVJLEFBc0dmLENBU0ksQ0FsRE0sR0EzRWMsR0E4RGxCLEFBc0NELEFBdUVFLElBN0NELEtBekNTLEVBVEgsQ0F5QkQsQUF1RUUsS0FwSEUsRUFZZixNQWlETSxFQXBIZixFQWlDRSxDQTJDTyxBQXlCUSxBQXVFRSxDQXZGRixJQXZEZixHQXVGaUIsT0FmRixBQXVFRSxDQXZGRSxDQStDbkIsR0EvSHNCLEVBOER4QixHQWtEb0IsQUFvRUMsS0FuRkksQUF1RUUsR0FqRzNCLEVBVWtCLElBL0JsQixDQTFDcUIsRUE2S0osQ0FwRWpCLENBekR3QixJQWdFSCxHQXRDSixJQW9HSyxXQW5HdEIsT0FvR29CLGdCQUNsQixTQXZMbUIsYUFpR1IsQUF1RUMsVUFDTSxDQWpIcEIsQUEwQzJCLFdBMUZiLElBa0taLElBbERGLElBL0dlLENBMEZmLFlBekZtQixpQkFDbkIsZ0JBVmUsYUFDZiIsImZpbGUiOiIvVXNlcnMvZW1tYXN0b3VtZW4vZGV2L25veHgtZW1iaXItd2Vic2l0ZS9jb21wb25lbnRzL015TGF5b3V0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgd2l0aFJvdXRlciB9IGZyb20gJ25leHQvcm91dGVyJ1xuaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0J1xuaW1wb3J0IEhlYWQgZnJvbSAnbmV4dC9oZWFkJ1xuaW1wb3J0IEhlYWRlciBmcm9tICcuL0hlYWRlcidcblxuY2xhc3MgTGF5b3V0IGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcbiAgc3RhdGUgPSB7aGFja2VyQ291bnQ6IDB9XG4gIGNvbXBvbmVudERpZE1vdW50KCkge1xuICAgIGRvY3VtZW50LmJvZHkuYWRkRXZlbnRMaXN0ZW5lcignY29udGV4dG1lbnUnLCB0aGlzLmNvbnRleHRNZW51KTtcbiAgICBkb2N1bWVudC5ib2R5LmFkZEV2ZW50TGlzdGVuZXIoJ2tleWRvd24nLCB0aGlzLmtleXByZXNzKTtcbiAgICBkb2N1bWVudC5ib2R5LmFkZEV2ZW50TGlzdGVuZXIoJ2RyYWdzdGFydCcsIHRoaXMuZHJhZyk7XG4gIH1cbiAgY29tcG9uZW50V2lsbFVubW91bnQoKSB7XG4gICAgZG9jdW1lbnQuYm9keS5yZW1vdmVFdmVudExpc3RlbmVyKCdjb250ZXh0bWVudScsIHRoaXMuY29udGV4dE1lbnUpO1xuICAgIGRvY3VtZW50LmJvZHkucmVtb3ZlRXZlbnRMaXN0ZW5lcigna2V5ZG93bicsIHRoaXMua2V5cHJlc3MpO1xuICAgIGRvY3VtZW50LmJvZHkucmVtb3ZlRXZlbnRMaXN0ZW5lcignZHJhZ3N0YXJ0JywgdGhpcy5kcmFnKTtcbiAgfVxuICBjb250ZXh0TWVudSA9IChlKSA9PiB7XG4gICAgaWYgKCcvY29udGFjdCcgPT0gdGhpcy5wcm9wcy5yb3V0ZXIucGF0aG5hbWUpIHJldHVybiB0cnVlO1xuICAgIGUucHJldmVudERlZmF1bHQoKTtcbiAgICBsZXQge2hhY2tlckNvdW50fSA9IHRoaXMuc3RhdGVcbiAgICBoYWNrZXJDb3VudCA9ICsraGFja2VyQ291bnRcbiAgICBpZiAoaGFja2VyQ291bnQgPiAxKSBhbGVydChgQ29weXJpZ2h0IMKpIDIwMTkgTm94eCBFbWJpci4gWW91IGhhdmUgZG9uZSB0aGlzICR7aGFja2VyQ291bnR9IHRpbWVzLiBZb3VyIElQIEFkZHJlc3MgbWF5IGJlIGxvZ2dlZC5gKTtcbiAgICBlbHNlIGFsZXJ0KFwiQ29weXJpZ2h0IMKpIDIwMTkgTm94eCBFbWJpci5cIik7XG4gICAgdGhpcy5zZXRTdGF0ZSh7aGFja2VyQ291bnR9KVxuICAgIHJldHVybiBmYWxzZTtcbiAgfVxuICBrZXlwcmVzcyA9IChlKSA9PiB7XG4gICAgaWYoZS5jdHJsS2V5ICYmIGUuc2hpZnRLZXkgJiYgZS5rZXlDb2RlID09ICdJJy5jaGFyQ29kZUF0KDApKXJldHVybiBmYWxzZTtcbiAgICBpZihlLmN0cmxLZXkgJiYgZS5zaGlmdEtleSAmJiBlLmtleUNvZGUgPT0gJ0onLmNoYXJDb2RlQXQoMCkpIHJldHVybiBmYWxzZTtcbiAgICBpZihlLmN0cmxLZXkgJiYgZS5rZXlDb2RlID09ICdVJy5jaGFyQ29kZUF0KDApKSByZXR1cm4gZmFsc2U7XG4gIH1cbiAgZHJhZyA9IChlKSA9PiB7XG4gICAgbGV0IHtoYWNrZXJDb3VudH0gPSB0aGlzLnN0YXRlXG4gICAgaGFja2VyQ291bnQgPSArK2hhY2tlckNvdW50XG4gICAgZS5wcmV2ZW50RGVmYXVsdCgpO1xuICAgIGlmIChoYWNrZXJDb3VudCA+IDEpIGFsZXJ0KFwiQ29weXJpZ2h0IMKpIDIwMTkgTm94eCBFbWJpci5cIik7XG4gICAgdGhpcy5zZXRTdGF0ZSh7aGFja2VyQ291bnR9KVxuICAgIHJldHVybiBmYWxzZTtcbiAgfVxuICByZW5kZXIoKSB7XG4gICAgcmV0dXJuKFxuICAgICAgPGRpdiBjbGFzc05hbWU9J2xheW91dCc+XG4gICAgICAgIDxIZWFkPlxuICAgICAgICAgIDxtZXRhIG5hbWU9XCJkZXNjcmlwdGlvblwiIGNvbnRlbnQ9XCJOb3h4IEVtYmlyIHdvcmtzIHdpdGggY2xpZW50cyB0byBwcm92aWRlIGhpZ2ggcXVhbGl0eSBwcm9kdWN0IHBob3RvZ3JhcGh5IGFuZCBkaWdpdGFsIHJldG91Y2hpbmcuIENvbnRhY3QgTm94eCB0byBkaXNjdXNzIGFueSBwcm9qZWN0IGlkZWFzLlwiLz5cbiAgICAgICAgICA8bWV0YSBuYW1lPVwiZ29vZ2xlLXNpdGUtdmVyaWZpY2F0aW9uXCIgY29udGVudD1cImZzaWxzRG9hZ1BpaVBTdW56UHdOR1J1TGNPUV9sZVdtNkdoc0oxb0NiOW9cIiAvPlxuICAgICAgICAgIDxsaW5rIHJlbD1cImljb25cIiB0eXBlPVwiaW1hZ2UveC1pY29uXCIgaHJlZj1cIi9zdGF0aWMvZmF2aWNvbi5pY29cIiAvPlxuICAgICAgICAgIDxsaW5rIGhyZWY9XCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9TGF0bzozMDBcIiByZWw9XCJzdHlsZXNoZWV0XCIvPlxuICAgICAgICAgIDxsaW5rIGhyZWY9XCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9Um9ib3RvK1NsYWI6MzAwXCIgcmVsPVwic3R5bGVzaGVldFwiLz5cbiAgICAgICAgICA8dGl0bGU+eyB0aGlzLnByb3BzLnRpdGxlIHx8IFwiTm94eCBFbWJpclwiIH08L3RpdGxlPlxuICAgICAgICA8L0hlYWQ+XG4gICAgICAgIDxoZWFkZXI+XG4gICAgICAgICAgPEhlYWRlciAvPlxuICAgICAgICA8L2hlYWRlcj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJtYWluXCI+XG4gICAgICAgICAge3RoaXMucHJvcHMuY2hpbGRyZW59XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8c3R5bGUganN4IGdsb2JhbD57YFxuICAgICAgICAgIGJvZHkge1xuICAgICAgICAgICAgYmFja2dyb3VuZDogYmxhY2s7XG4gICAgICAgICAgICBjb2xvcjogd2hpdGU7XG4gICAgICAgICAgICBtYXJnaW46IDBweDtcbiAgICAgICAgICAgIHBhZGRpbmcgMHB4O1xuICAgICAgICAgICAgZm9udC1mYW1pbHk6ICdMYXRvJywgc2Fucy1zZXJpZjtcbiAgICAgICAgICB9XG4gICAgICAgICAgLmxheW91dCB7XG4gICAgICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgICAgICB0b3A6IDA7XG4gICAgICAgICAgICBsZWZ0OiAwO1xuICAgICAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICAgICAgaGVpZ2h0OiAxMDB2aDtcbiAgICAgICAgICB9XG4gICAgICAgICAgLm1haW4ge1xuICAgICAgICAgICAgZmxleDogMTtcbiAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICAgICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgICAgICB3aWR0aDogMTAwdnc7XG4gICAgICAgICAgICBoZWlnaHQ6IDEwMHZoO1xuICAgICAgICAgICAgcGFkZGluZy10b3A6IDUycHg7XG4gICAgICAgICAgfVxuICAgICAgICAgIEBrZXlmcmFtZXMgYXBwZWFyIHtcbiAgICAgICAgICAgIDAlIHtcbiAgICAgICAgICAgICAgb3BhY2l0eTogMDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIDEwMCUge1xuICAgICAgICAgICAgICBvcGFjaXR5OiAxO1xuICAgICAgICAgICAgfVxuICAgICAgICAgIH1cbiAgICAgICAgICBAa2V5ZnJhbWVzIHNsaWRlSW4ge1xuICAgICAgICAgICAgMCUge1xuICAgICAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTIlKTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIDEwMCUge1xuICAgICAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoMCk7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgfVxuICAgICAgICAgIEBrZXlmcmFtZXMgc2hyaW5rIHtcbiAgICAgICAgICAgIDAlIHtcbiAgICAgICAgICAgICAgd2lkdGg6IDk1JTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIDEwMCUge1xuICAgICAgICAgICAgICB3aWR0aDogOTAlO1xuICAgICAgICAgICAgfVxuICAgICAgICAgIH1cblxuICAgICAgICAgIC5oZWFkZXItZGVza3RvcCB7XG4gICAgICAgICAgICBkaXNwbGF5OiBub25lO1xuICAgICAgICAgIH1cblxuICAgICAgICAgIC5leGFtcGxlLWFwcGVhciB7XG4gICAgICAgICAgICBvcGFjaXR5OiAwLjAxO1xuICAgICAgICAgIH1cblxuICAgICAgICAgIC5leGFtcGxlLWFwcGVhci5leGFtcGxlLWFwcGVhci1hY3RpdmUge1xuICAgICAgICAgICAgb3BhY2l0eTogMTtcbiAgICAgICAgICAgIHRyYW5zaXRpb246IG9wYWNpdHkgMXMgZWFzZTtcbiAgICAgICAgICAgIHRyYW5zaXRpb24tZGVsYXk6IDAuNXM7XG4gICAgICAgICAgfVxuXG4gICAgICAgICAgLmNvbnRhY3QtY29udGFpbmVyIHtcbiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICMxYTFhMWE7XG4gICAgICAgICAgICBtaW4taGVpZ2h0OiBjYWxjKDEwMHZoIC0gNTJweCk7XG4gICAgICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICAgICAgICB9XG5cbiAgICAgICAgICAuY29udGFjdC1zdWJjb250YWluZXIge1xuICAgICAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgICAgIGZsZXg6IDE7XG4gICAgICAgICAgfVxuXG4gICAgICAgICAgLmNvbnRhY3Qge1xuICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgICAgICAgICAgcGFkZGluZzogMTBweDtcbiAgICAgICAgICAgIG1hcmdpbi1yaWdodDogMjBweDtcbiAgICAgICAgICAgIG1hcmdpbi1sZWZ0OiAyMHB4O1xuICAgICAgICAgICAgbWFyZ2luLWJvdHRvbTogMzBweDtcbiAgICAgICAgICAgIGZsZXg6IDE7XG4gICAgICAgICAgfVxuXG4gICAgICAgICAgLmNvbnRhY3QgaW5wdXRbdHlwZT10ZXh0XSwgLmNvbnRhY3QgaW5wdXRbdHlwZT1lbWFpbF0sIC5jb250YWN0IHNlbGVjdCwgLmNvbnRhY3QgdGV4dGFyZWEge1xuICAgICAgICAgICAgd2lkdGg6IDEwMCU7IC8qIEZ1bGwgd2lkdGggKi9cbiAgICAgICAgICAgIHBhZGRpbmc6IDEycHg7IC8qIFNvbWUgcGFkZGluZyAqL1xuICAgICAgICAgICAgYm9yZGVyOiAxcHggc29saWQgI2NjYzsgLyogR3JheSBib3JkZXIgKi9cbiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDsgLyogUm91bmRlZCBib3JkZXJzICovXG4gICAgICAgICAgICBib3gtc2l6aW5nOiBib3JkZXItYm94OyAvKiBNYWtlIHN1cmUgdGhhdCBwYWRkaW5nIGFuZCB3aWR0aCBzdGF5cyBpbiBwbGFjZSAqL1xuICAgICAgICAgICAgbWFyZ2luLXRvcDogNnB4OyAvKiBBZGQgYSB0b3AgbWFyZ2luICovXG4gICAgICAgICAgICBtYXJnaW4tYm90dG9tOiAxNnB4OyAvKiBCb3R0b20gbWFyZ2luICovXG4gICAgICAgICAgICByZXNpemU6IHZlcnRpY2FsOyAvKiBBbGxvdyB0aGUgdXNlciB0byB2ZXJ0aWNhbGx5IHJlc2l6ZSB0aGUgdGV4dGFyZWEgKG5vdCBob3Jpem9udGFsbHkpICovXG4gICAgICAgICAgICBmb250LXNpemU6IDFyZW07XG4gICAgICAgICAgfVxuXG4gICAgICAgICAgI21lc3NhZ2Uge1xuICAgICAgICAgICAgaGVpZ2h0OiAxMDBweDtcbiAgICAgICAgICB9XG5cbiAgICAgICAgICAuY29udGFjdCBpbnB1dFt0eXBlPXN1Ym1pdF0ge1xuICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2VkMWMyNDtcbiAgICAgICAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICAgICAgICAgIHBhZGRpbmc6IDEycHggMjBweDtcbiAgICAgICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgICAgIGZvbnQtc2l6ZTogMXJlbTtcbiAgICAgICAgICAgIGFsaWduLXNlbGY6IGZsZXgtY2VudGVyO1xuICAgICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgICAgLXdlYmtpdC1hcHBlYXJhbmNlOiBub25lO1xuICAgICAgICAgIH1cblxuICAgICAgICAgIC5jb250YWN0IGlucHV0W3R5cGU9c3VibWl0XTpob3ZlciB7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjYTUwZDEyO1xuICAgICAgICAgIH1cblxuICAgICAgICAgIC5hYm91dCB7XG4gICAgICAgICAgICBmb250LXNpemU6IDFyZW07XG4gICAgICAgICAgICBmb250LWZhbWlseTogJ1JvYm90byBTbGFiJywgc2VyaWY7XG4gICAgICAgICAgICBmbGV4OiAxO1xuICAgICAgICAgICAgcGFkZGluZzogMjBweDtcbiAgICAgICAgICAgIGxpbmUtaGVpZ2h0OiAyMDAlO1xuICAgICAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgICAgIH1cblxuICAgICAgICAgIC5jb250YWN0LWZvb3RlciB7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcbiAgICAgICAgICAgIHBhZGRpbmc6IDIwcHggMCAyMHB4IDUwcHg7XG4gICAgICAgICAgICBjb2xvcjogZ3JheTtcbiAgICAgICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICAgIH1cblxuXG4gICAgICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3MDFweCkge1xuICAgICAgICAgICAgLmNvbnRhY3Qtc3ViY29udGFpbmVyIHtcbiAgICAgICAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbi1yZXZlcnNlO1xuICAgICAgICAgICAgfVxuICAgICAgICAgIH1cblxuICAgICAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1pbi13aWR0aDogMTEwMXB4KSB7XG4gICAgICAgICAgICAuUmVhY3RHcmlkR2FsbGVyeV90aWxlLXZpZXdwb3J0OmhvdmVyIHtcbiAgICAgICAgICAgICAgYmFja2dyb3VuZDogYmxhY2s7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAuUmVhY3RHcmlkR2FsbGVyeV90aWxlLXZpZXdwb3J0OmhvdmVyIGltZyB7XG4gICAgICAgICAgICAgIG9wYWNpdHk6IDAuNztcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5sYXlvdXQge1xuXG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAubWFpbiB7XG4gICAgICAgICAgICAgIHBhZGRpbmctdG9wOiAwcHg7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAuaGVhZGVyLWRlc2t0b3Age1xuXG4gICAgICAgICAgICAgIHdpZHRoOiAxMDB2dztcbiAgICAgICAgICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAuaGVhZGVyLW1vYmlsZSB7XG4gICAgICAgICAgICAgIGRpc3BsYXk6IG5vbmUgIWltcG9ydGFudDtcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgLmNvbnRhY3QtY29udGFpbmVyIHtcbiAgICAgICAgICAgICAgbWluLWhlaWdodDogY2FsYygxMDB2aCAtIDEwMHB4KTtcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgLmNvbnRhY3Qge1xuICAgICAgICAgICAgICBwYWRkaW5nOiA3MHB4O1xuICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICAuY29udGFjdCBpbnB1dFt0eXBlPXN1Ym1pdF0ge1xuICAgICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZWQxYzI0O1xuICAgICAgICAgICAgICBjb2xvcjogd2hpdGU7XG4gICAgICAgICAgICAgIHBhZGRpbmc6IDEycHggMjBweDtcbiAgICAgICAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgICAgICAgZm9udC1zaXplOiAxcmVtO1xuICAgICAgICAgICAgICBhbGlnbi1zZWxmOiBmbGV4LWNlbnRlcjtcbiAgICAgICAgICAgICAgd2lkdGg6IDIwJTtcbiAgICAgICAgICAgICAgbWluLXdpZHRoOiAxMDBweDtcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgLmNvbnRhY3QgaW5wdXRbdHlwZT1zdWJtaXRdOmhvdmVyIHtcbiAgICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2E1MGQxMjtcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgLmFib3V0IHtcbiAgICAgICAgICAgICAgZm9udC1zaXplOiAxLjNyZW07XG4gICAgICAgICAgICAgIGxldHRlci1zcGFjaW5nOiAycHg7XG4gICAgICAgICAgICAgIGxpbmUtaGVpZ2h0OiAyMDAlO1xuICAgICAgICAgICAgICBwYWRkaW5nOiA3MHB4O1xuICAgICAgICAgICAgICBtYXJnaW4tcmlnaHQ6IDYwcHg7XG4gICAgICAgICAgICAgIHRleHQtYWxpZ246IGxlZnQ7XG4gICAgICAgICAgICB9XG5cblxuICAgICAgICAgIH1cbiAgICAgICAgYH08L3N0eWxlPlxuICAgICAgPC9kaXY+XG4gICAgKVxuICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IHdpdGhSb3V0ZXIoTGF5b3V0KVxuIl19 */\n/*@ sourceURL=/Users/emmastoumen/dev/noxx-embir-website/components/MyLayout.js */"));
+    }
+  }]);
+
+  return Layout;
+}(react__WEBPACK_IMPORTED_MODULE_9___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_8__["withRouter"])(Layout));
 
 /***/ }),
 
@@ -352,7 +668,6 @@ var styles = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MobileHeader; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
@@ -367,6 +682,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var react_scrolllock__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-scrolllock */ "react-scrolllock");
 /* harmony import */ var react_scrolllock__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_scrolllock__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var react_addons_css_transition_group__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-addons-css-transition-group */ "react-addons-css-transition-group");
+/* harmony import */ var react_addons_css_transition_group__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_addons_css_transition_group__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_12__);
 
 
 
@@ -375,7 +694,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/kestanous/dev/play/noxx-embir-website/components/mobile/header.js";
+var _jsxFileName = "/Users/emmastoumen/dev/noxx-embir-website/components/mobile/header.js";
+
+
 
 
 
@@ -404,7 +725,7 @@ function (_React$Component) {
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "styles", {
       container: {
-        position: 'absolute',
+        position: 'fixed',
         top: 0,
         left: 0,
         zIndex: '99',
@@ -448,7 +769,8 @@ function (_React$Component) {
       var _this2 = this;
 
       var open = this.state.open,
-          styles = this.styles;
+          styles = this.styles,
+          router = this.props.router;
       var menuItems = this.props.links.map(function (_ref, i) {
         var name = _ref.name,
             url = _ref.url;
@@ -458,9 +780,10 @@ function (_React$Component) {
           delay: "".concat(i * 0.1, "s"),
           url: url,
           name: name,
+          selected: router.pathname == url,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 34
+            lineNumber: 35
           },
           __self: this
         });
@@ -469,7 +792,7 @@ function (_React$Component) {
         className: "header-mobile",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 38
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
@@ -477,7 +800,7 @@ function (_React$Component) {
         onClick: this.handleMenuClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 39
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(MenuButton, {
@@ -485,74 +808,206 @@ function (_React$Component) {
         color: "white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 40
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: styles.logo,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 41
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: styles.logoSub,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 41
         },
         __self: this
       }, "Noxx Embir Photography"))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Menu, {
         open: open,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 43
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_scrolllock__WEBPACK_IMPORTED_MODULE_10___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 44
         },
         __self: this
-      }, menuItems)));
+      }, menuItems), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+        style: {
+          marginTop: 50,
+          width: "100%",
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 47
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_addons_css_transition_group__WEBPACK_IMPORTED_MODULE_11___default.a, {
+        transitionName: "example",
+        transitionAppear: true,
+        transitionAppearTimeout: 1500,
+        transitionEnterTimeout: 0,
+        transitionLeaveTimeout: 0,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+        style: {
+          background: 'white',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          borderRadius: "50%",
+          width: 165,
+          height: 165
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
+        src: "/static/noxx_embir_logo.svg",
+        style: {
+          width: 160,
+          height: 160
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66
+        },
+        __self: this
+      }))))));
     }
   }]);
 
   return MobileHeader;
 }(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_12__["withRouter"])(MobileHeader));
+
+var Menu =
+/*#__PURE__*/
+function (_React$Component2) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(Menu, _React$Component2);
+
+  function Menu(props) {
+    var _this3;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Menu);
+
+    _this3 = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Menu).call(this, props));
+    _this3.state = {
+      open: _this3.props.open ? _this3.props.open : false
+    };
+    return _this3;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Menu, [{
+    key: "componentWillReceiveProps",
+    value: function componentWillReceiveProps(nextProps) {
+      if (nextProps.open !== this.state.open) {
+        this.setState({
+          open: nextProps.open
+        });
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var styles = {
+        container: {
+          position: "fixed",
+          top: 0,
+          left: 0,
+          height: this.state.open ? '100%' : 0,
+          width: '100vw',
+          display: 'flex',
+          flexDirection: 'column',
+          background: 'black',
+          opacity: 1,
+          color: '#fafafa',
+          transition: 'height 0.3s ease',
+          zIndex: 2
+        },
+        subContainer: {
+          height: 550,
+          overflowY: 'auto'
+        },
+        menuList: {
+          paddingTop: '3rem'
+        }
+      };
+      return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+        style: styles.container,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 120
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+        style: styles.subContainer,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 121
+        },
+        __self: this
+      }, this.state.open ? react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+        style: styles.menuList,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 123
+        },
+        __self: this
+      }, this.props.children) : null));
+    }
+  }]);
+
+  return Menu;
+}(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component);
 /* MenuItem.jsx*/
-
-
 
 
 var MenuItem =
 /*#__PURE__*/
-function (_React$Component2) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(MenuItem, _React$Component2);
+function (_React$Component3) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(MenuItem, _React$Component3);
 
   function MenuItem(props) {
-    var _this3;
+    var _this4;
 
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, MenuItem);
 
-    _this3 = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(MenuItem).call(this, props));
+    _this4 = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(MenuItem).call(this, props));
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this3), "handleHover", function () {
-      _this3.setState({
-        hover: !_this3.state.hover
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this4), "handleHover", function () {
+      _this4.setState({
+        hover: !_this4.state.hover
       });
     });
 
-    _this3.state = {
+    _this4.state = {
       hover: false
     };
-    return _this3;
+    return _this4;
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(MenuItem, [{
     key: "render",
     value: function render() {
+      var color = this.state.hover ? "gray" : "#fafafa";
+      color = this.props.selected ? "#ed1c24" : color;
       var styles = {
         container: {
           opacity: 0,
@@ -565,7 +1020,7 @@ function (_React$Component2) {
           padding: '1rem 0',
           margin: '0 5%',
           cursor: 'pointer',
-          color: this.state.hover ? 'gray' : '#fafafa',
+          color: color,
           transition: 'color 0.2s ease-in-out',
           animation: '0.5s slideIn forwards',
           animationDelay: this.props.delay
@@ -586,14 +1041,14 @@ function (_React$Component2) {
         style: styles.container,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 181
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
         href: this.props.url,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 182
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
@@ -603,21 +1058,21 @@ function (_React$Component2) {
         onClick: this.props.onClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 183
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
         style: styles.linkStyle,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 185
         },
         __self: this
       }, this.props.name))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: styles.line,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 188
         },
         __self: this
       }));
@@ -625,75 +1080,6 @@ function (_React$Component2) {
   }]);
 
   return MenuItem;
-}(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component);
-
-var Menu =
-/*#__PURE__*/
-function (_React$Component3) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(Menu, _React$Component3);
-
-  function Menu(props) {
-    var _this4;
-
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Menu);
-
-    _this4 = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Menu).call(this, props));
-    _this4.state = {
-      open: _this4.props.open ? _this4.props.open : false
-    };
-    return _this4;
-  }
-
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Menu, [{
-    key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(nextProps) {
-      if (nextProps.open !== this.state.open) {
-        this.setState({
-          open: nextProps.open
-        });
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var styles = {
-        container: {
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          height: this.state.open ? '100%' : 0,
-          width: '100vw',
-          display: 'flex',
-          flexDirection: 'column',
-          background: 'black',
-          opacity: 0.95,
-          color: '#fafafa',
-          transition: 'height 0.3s ease',
-          zIndex: 2
-        },
-        menuList: {
-          paddingTop: '3rem'
-        }
-      };
-      return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
-        style: styles.container,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 154
-        },
-        __self: this
-      }, this.state.open ? react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
-        style: styles.menuList,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 157
-        },
-        __self: this
-      }, this.props.children) : null);
-    }
-  }]);
-
-  return Menu;
 }(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component);
 /* MenuButton.jsx */
 
@@ -776,28 +1162,28 @@ function (_React$Component4) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 222
+          lineNumber: 250
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, styles.line, styles.lineTop),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 225
+          lineNumber: 253
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, styles.line, styles.lineMiddle),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 226
+          lineNumber: 254
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, styles.line, styles.lineBottom),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 227
+          lineNumber: 255
         },
         __self: this
       }));
@@ -813,10 +1199,10 @@ function (_React$Component4) {
 /*!**********************************!*\
   !*** ./images/architecture.json ***!
   \**********************************/
-/*! exports provided: 0, default */
+/*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, default */
 /***/ (function(module) {
 
-module.exports = [{"lightbox":{"src":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Product/ciroc_web_large.jpg","caption":"© Noxx Embir"},"thumbnail":{"thumbnail":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Product/ciroc_web_small_681_900.jpg","thumbnailWidth":681,"thumbnailHeight":900}}];
+module.exports = [{"lightbox":{"src":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/Jackson2_web_large.jpg","caption":"© Noxx Embir"},"thumbnail":{"thumbnail":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/Jackson2_web_small_512_900.jpg","thumbnailWidth":512,"thumbnailHeight":900}},{"lightbox":{"src":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/Layers_web_large.jpg","caption":"© Noxx Embir"},"thumbnail":{"thumbnail":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/Layers_web_small_1354_900.jpg","thumbnailWidth":1354,"thumbnailHeight":900}},{"lightbox":{"src":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/mansion2_web_large.jpg","caption":"© Noxx Embir"},"thumbnail":{"thumbnail":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/mansion2_web_small_1454_900.jpg","thumbnailWidth":1454,"thumbnailHeight":900}},{"lightbox":{"src":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/campus2_web_large.jpg","caption":"© Noxx Embir"},"thumbnail":{"thumbnail":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/campus2_web_small_1297_900.jpg","thumbnailWidth":1297,"thumbnailHeight":900}},{"lightbox":{"src":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/Jackson1_web_large.jpg","caption":"© Noxx Embir"},"thumbnail":{"thumbnail":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/Jackson1_web_small_581_900.jpg","thumbnailWidth":581,"thumbnailHeight":900}},{"lightbox":{"src":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/Jackson3_web_large.jpg","caption":"© Noxx Embir"},"thumbnail":{"thumbnail":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/Jackson3_web_small_636_900.jpg","thumbnailWidth":636,"thumbnailHeight":900}},{"lightbox":{"src":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/campus3_web_large.jpg","caption":"© Noxx Embir"},"thumbnail":{"thumbnail":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/campus3_web_small_1268_900.jpg","thumbnailWidth":1268,"thumbnailHeight":900}},{"lightbox":{"src":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/Beach2_web_large.jpg","caption":"© Noxx Embir"},"thumbnail":{"thumbnail":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/Beach2_web_small_1257_900.jpg","thumbnailWidth":1257,"thumbnailHeight":900}},{"lightbox":{"src":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/campus_web_large.jpg","caption":"© Noxx Embir"},"thumbnail":{"thumbnail":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/campus_web_small_531_900.jpg","thumbnailWidth":531,"thumbnailHeight":900}},{"lightbox":{"src":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/mansion_web_large.jpg","caption":"© Noxx Embir"},"thumbnail":{"thumbnail":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/mansion_web_small_1350_900.jpg","thumbnailWidth":1350,"thumbnailHeight":900}},{"lightbox":{"src":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/Beach3_web_large.jpg","caption":"© Noxx Embir"},"thumbnail":{"thumbnail":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/Beach3_web_small_1320_900.jpg","thumbnailWidth":1320,"thumbnailHeight":900}},{"lightbox":{"src":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/Beach1_web_large.jpg","caption":"© Noxx Embir"},"thumbnail":{"thumbnail":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/Beach1_web_small_1413_900.jpg","thumbnailWidth":1413,"thumbnailHeight":900}},{"lightbox":{"src":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/Porch_web_large.jpg","caption":"© Noxx Embir"},"thumbnail":{"thumbnail":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/Porch_web_small_1260_900.jpg","thumbnailWidth":1260,"thumbnailHeight":900}},{"lightbox":{"src":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/campus4_web_large.jpg","caption":"© Noxx Embir"},"thumbnail":{"thumbnail":"https://noxxembirphotostorage.sfo2.cdn.digitaloceanspaces.com/Architecture/campus4_web_small_1341_900.jpg","thumbnailWidth":1341,"thumbnailHeight":900}}];
 
 /***/ }),
 
@@ -2463,7 +2849,7 @@ var _images_architecture_json__WEBPACK_IMPORTED_MODULE_8___namespace = /*#__PURE
 
 
 
-var _jsxFileName = "/Users/kestanous/dev/play/noxx-embir-website/pages/architecture.js";
+var _jsxFileName = "/Users/emmastoumen/dev/noxx-embir-website/pages/architecture.js";
 
 
 
@@ -2484,6 +2870,7 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_MyLayout_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        title: "Architecture",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 9
@@ -2507,14 +2894,14 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 6:
 /*!*************************************!*\
   !*** multi ./pages/architecture.js ***!
   \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/kestanous/dev/play/noxx-embir-website/pages/architecture.js */"./pages/architecture.js");
+module.exports = __webpack_require__(/*! /Users/emmastoumen/dev/noxx-embir-website/pages/architecture.js */"./pages/architecture.js");
 
 
 /***/ }),
@@ -2651,6 +3038,17 @@ module.exports = require("next/dynamic");
 
 /***/ }),
 
+/***/ "next/head":
+/*!****************************!*\
+  !*** external "next/head" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
+
+/***/ }),
+
 /***/ "next/router":
 /*!******************************!*\
   !*** external "next/router" ***!
@@ -2692,6 +3090,17 @@ module.exports = require("prop-types-exact");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-addons-css-transition-group":
+/*!****************************************************!*\
+  !*** external "react-addons-css-transition-group" ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-addons-css-transition-group");
 
 /***/ }),
 
